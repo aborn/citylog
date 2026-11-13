@@ -76,7 +76,16 @@ final class ContentTests: XCTestCase {
     func test_themesFilter_byLens() throws {
         let store = ContentStore(bundle: try loadBundled())
         XCTAssertTrue(store.themes(inCity: "shanghai", lens: .history).allSatisfy { $0.lens == .history })
-        XCTAssertTrue(store.themes(inCity: "shanghai", lens: .nature).isEmpty)
+        XCTAssertFalse(store.themes(inCity: "shanghai", lens: .history).isEmpty)
+        XCTAssertTrue(store.themes(inCity: "nowhere", lens: .history).isEmpty)
+    }
+
+    func test_bundledContent_everyCityCoversAllSixLenses() throws {
+        let content = try loadBundled()
+        for city in content.cities {
+            let lenses = Set(content.themes.filter { $0.cityId == city.id }.map(\.lens))
+            XCTAssertEqual(lenses, Set(Lens.allCases), "\(city.id) 缺少镜头")
+        }
     }
 
     func test_decode_invalidJSON_throws() {

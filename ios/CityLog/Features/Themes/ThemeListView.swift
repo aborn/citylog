@@ -31,9 +31,11 @@ struct ThemeListView: View {
                         .buttonStyle(.plain)
                 }
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(Metrics.screenPadding)
         }
-        .background(Color.clBackground)
+        .frame(maxWidth: .infinity)
+        .background(Color.clBackground.ignoresSafeArea())
         .navigationTitle(s.themesTitle)
     }
 

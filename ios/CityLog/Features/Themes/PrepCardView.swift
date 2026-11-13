@@ -62,9 +62,11 @@ struct PrepCardView: View {
                 Button(s.prepStart) { start() }
                     .buttonStyle(PrimaryButtonStyle())
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(Metrics.screenPadding)
         }
-        .background(Color.clBackground)
+        .frame(maxWidth: .infinity)
+        .background(Color.clBackground.ignoresSafeArea())
         .navigationTitle(s.prepTitle)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear { band = profileStore.ageBand }

@@ -82,7 +82,9 @@ struct AppStrings {
     let snapNotConfigured: String
 
     // MARK: - Journal
+    let journalEmptyTitle: String
     let journalEmpty: String
+    let journalPickTheme: String
     let unitKm: String
     let journalStops: String
     let journalSnaps: String
@@ -166,7 +168,7 @@ extension AppStrings {
         snapQuestionPlaceholder: "想问什么？不填就问“这是什么”", snapDefaultQuestion: "这是什么？讲给孩子听。",
         snapAsk: "问 AI", snapThinking: "正在看…", snapSave: "存进今天的日志",
         snapNotConfigured: "还没有配置 AI 服务。请到“我家 → AI 服务”里填写。",
-        journalEmpty: "还没有出门记录。挑一个主题，这个周末走一走。", unitKm: "公里",
+        journalEmptyTitle: "还没有出门记录", journalEmpty: "每次出门回来，这里会多一页：走过的路、孩子说的话、路上问过的问题。", journalPickTheme: "挑一个主题", unitKm: "公里",
         journalStops: "到过的站", journalSnaps: "个问答", journalChildSaid: "孩子说",
         journalQuotePlaceholder: "补记一句孩子说的话", journalDeleteConfirm: "删除这页日志？",
         familyChild: "孩子", familyNickname: "昵称", familyBirthYear: "出生年份", familyCity: "城市",
@@ -201,7 +203,7 @@ extension AppStrings {
         snapQuestionPlaceholder: "What do you want to ask? Leave empty for \"What is this?\"", snapDefaultQuestion: "What is this? Explain it to a child.",
         snapAsk: "Ask AI", snapThinking: "Looking…", snapSave: "Save to today's journal",
         snapNotConfigured: "The AI service is not set up yet. Add it under Family → AI service.",
-        journalEmpty: "No outings yet. Pick a theme and take a walk this weekend.", unitKm: "km",
+        journalEmptyTitle: "No outings yet", journalEmpty: "Each outing adds a page here: the route you walked, what your child said, and the questions you asked along the way.", journalPickTheme: "Pick a theme", unitKm: "km",
         journalStops: "stops visited", journalSnaps: "Q&As", journalChildSaid: "Your child said",
         journalQuotePlaceholder: "Add something your child said", journalDeleteConfirm: "Delete this journal page?",
         familyChild: "Child", familyNickname: "Nickname", familyBirthYear: "Birth year", familyCity: "City",
@@ -236,7 +238,7 @@ extension AppStrings {
         snapQuestionPlaceholder: "何を聞きますか？空欄なら「これは何？」", snapDefaultQuestion: "これは何？子どもに説明して。",
         snapAsk: "AI に聞く", snapThinking: "見ています…", snapSave: "今日の日誌に保存",
         snapNotConfigured: "AI サービスが未設定です。「わが家 → AI サービス」で設定してください。",
-        journalEmpty: "まだ記録がありません。テーマを選んで、今週末歩いてみましょう。", unitKm: "km",
+        journalEmptyTitle: "まだ記録がありません", journalEmpty: "おでかけのたびに、ここに1ページ増えます。歩いた道、子どものことば、途中で聞いた質問が残ります。", journalPickTheme: "テーマを選ぶ", unitKm: "km",
         journalStops: "到着した場所", journalSnaps: "件の質問", journalChildSaid: "子どものことば",
         journalQuotePlaceholder: "お子さんのことばを書きとめる", journalDeleteConfirm: "この日誌を削除しますか？",
         familyChild: "子ども", familyNickname: "ニックネーム", familyBirthYear: "生まれ年", familyCity: "街",

@@ -32,9 +32,14 @@ struct WalkRequest: Identifiable, Equatable {
 @MainActor
 final class AppRouter: ObservableObject {
     @Published var walk: WalkRequest?
-    @Published var selectedTab: AppTab = .map
+    @Published var selectedTab: AppTab
+
+    /// 启动参数 `-initialTab journal` 可以直接打开某个标签页，方便截图和调试。
+    init(defaults: UserDefaults = .standard) {
+        selectedTab = defaults.string(forKey: "initialTab").flatMap(AppTab.init(rawValue:)) ?? .map
+    }
 }
 
-enum AppTab: Hashable {
+enum AppTab: String, Hashable {
     case map, themes, journal, family
 }

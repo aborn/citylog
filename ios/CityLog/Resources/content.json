@@ -2,14 +2,28 @@
   "cities": [
     {
       "id": "shanghai",
-      "name": { "zh": "上海", "en": "Shanghai", "ja": "上海" },
-      "center": { "lat": 31.2304, "lon": 121.4737 },
+      "name": {
+        "zh": "上海",
+        "en": "Shanghai",
+        "ja": "上海"
+      },
+      "center": {
+        "lat": 31.2304,
+        "lon": 121.4737
+      },
       "usesGCJ02": true
     },
     {
       "id": "osaka",
-      "name": { "zh": "大阪", "en": "Osaka", "ja": "大阪" },
-      "center": { "lat": 34.6937, "lon": 135.5023 },
+      "name": {
+        "zh": "大阪",
+        "en": "Osaka",
+        "ja": "大阪"
+      },
+      "center": {
+        "lat": 34.6937,
+        "lon": 135.5023
+      },
       "usesGCJ02": false
     }
   ],
@@ -18,38 +32,103 @@
       "id": "sh-suzhou-creek",
       "cityId": "shanghai",
       "lens": "industry",
-      "title": { "zh": "苏州河边为什么有工厂？", "en": "Why were factories built along Suzhou Creek?", "ja": "蘇州河のそばに、なぜ工場があったの？" },
-      "area": { "zh": "普陀区 · 莫干山路", "en": "Putuo · Moganshan Road", "ja": "普陀区・莫干山路" },
+      "title": {
+        "zh": "苏州河边为什么有工厂？",
+        "en": "Why were factories built along Suzhou Creek?",
+        "ja": "蘇州河のそばに、なぜ工場があったの？"
+      },
+      "area": {
+        "zh": "普陀区 · 莫干山路",
+        "en": "Putuo · Moganshan Road",
+        "ja": "普陀区・莫干山路"
+      },
       "distanceKm": 1.6,
       "minutes": 90,
       "oneLiner": {
-        "young": { "zh": "以前运东西主要靠船，所以工厂喜欢住在河边。", "en": "Long ago, things were moved by boat, so factories liked to live by the river.", "ja": "むかしは荷物を船で運んだから、工場は川のそばにあったんだよ。" },
-        "middle": { "zh": "一百年前运货主要靠船。工厂盖在苏州河边，原料运得进来，做好的东西运得出去。", "en": "A hundred years ago goods travelled by boat. A factory on Suzhou Creek could bring materials in and send finished goods out.", "ja": "100年前、荷物は主に船で運びました。蘇州河のそばなら、材料を運び入れ、できた品物を運び出せました。" },
-        "older": { "zh": "水运便宜、运量大，所以近代上海的面粉厂、纺织厂沿苏州河排开。后来公路铁路发达、城市变大，工厂外迁，老厂房变成了园区和公园。", "en": "Water transport was cheap and carried a lot, so Shanghai's flour and textile mills lined Suzhou Creek. As roads and rail improved and the city grew, factories moved out and the old buildings became studios and parks.", "ja": "水運は安く、たくさん運べたので、近代上海の製粉工場や紡績工場は蘇州河沿いに並びました。道路や鉄道が発達し、街が大きくなると工場は郊外へ移り、古い建物はアトリエや公園になりました。" }
+        "young": {
+          "zh": "以前运东西主要靠船，所以工厂喜欢住在河边。",
+          "en": "Long ago, things were moved by boat, so factories liked to live by the river.",
+          "ja": "むかしは荷物を船で運んだから、工場は川のそばにあったんだよ。"
+        },
+        "middle": {
+          "zh": "一百年前运货主要靠船。工厂盖在苏州河边，原料运得进来，做好的东西运得出去。",
+          "en": "A hundred years ago goods travelled by boat. A factory on Suzhou Creek could bring materials in and send finished goods out.",
+          "ja": "100年前、荷物は主に船で運びました。蘇州河のそばなら、材料を運び入れ、できた品物を運び出せました。"
+        },
+        "older": {
+          "zh": "水运便宜、运量大，所以近代上海的面粉厂、纺织厂沿苏州河排开。后来公路铁路发达、城市变大，工厂外迁，老厂房变成了园区和公园。",
+          "en": "Water transport was cheap and carried a lot, so Shanghai's flour and textile mills lined Suzhou Creek. As roads and rail improved and the city grew, factories moved out and the old buildings became studios and parks.",
+          "ja": "水運は安く、たくさん運べたので、近代上海の製粉工場や紡績工場は蘇州河沿いに並びました。道路や鉄道が発達し、街が大きくなると工場は郊外へ移り、古い建物はアトリエや公園になりました。"
+        }
       },
       "question": {
-        "young": { "zh": "你数一数，河上有几座桥？船从哪边来？", "en": "How many bridges can you count? Which way do the boats come from?", "ja": "橋はいくつあるかな？船はどっちから来る？" },
-        "middle": { "zh": "如果你要开一家工厂，会盖在哪里？为什么？", "en": "If you opened a factory, where would you build it, and why?", "ja": "工場をつくるなら、どこに建てる？どうして？" },
-        "older": { "zh": "工厂搬走以后，这些老房子为什么没有拆掉？", "en": "After the factories left, why weren't these old buildings torn down?", "ja": "工場がなくなったあと、なぜ古い建物は壊されなかったのだろう？" }
+        "young": {
+          "zh": "你数一数，河上有几座桥？船从哪边来？",
+          "en": "How many bridges can you count? Which way do the boats come from?",
+          "ja": "橋はいくつあるかな？船はどっちから来る？"
+        },
+        "middle": {
+          "zh": "如果你要开一家工厂，会盖在哪里？为什么？",
+          "en": "If you opened a factory, where would you build it, and why?",
+          "ja": "工場をつくるなら、どこに建てる？どうして？"
+        },
+        "older": {
+          "zh": "工厂搬走以后，这些老房子为什么没有拆掉？",
+          "en": "After the factories left, why weren't these old buildings torn down?",
+          "ja": "工場がなくなったあと、なぜ古い建物は壊されなかったのだろう？"
+        }
       },
       "stops": [
         {
           "id": "sh-m50",
-          "name": { "zh": "M50 创意园", "en": "M50 Creative Park", "ja": "M50創意園" },
-          "story": { "zh": "这里原来是一家纺织厂，机器从早转到晚。工厂搬走后，画家们搬了进来，厂房变成了画室和展厅。", "en": "This used to be a textile mill with machines running from morning to night. After the mill left, painters moved in and the workshops became studios and galleries.", "ja": "ここはもと紡績工場で、機械が朝から晩まで動いていました。工場がなくなったあと画家たちが移り住み、アトリエやギャラリーになりました。" },
-          "coordinate": { "lat": 31.2497, "lon": 121.4489 }
+          "name": {
+            "zh": "M50 创意园",
+            "en": "M50 Creative Park",
+            "ja": "M50創意園"
+          },
+          "story": {
+            "zh": "这里原来是一家纺织厂，机器从早转到晚。工厂搬走后，画家们搬了进来，厂房变成了画室和展厅。",
+            "en": "This used to be a textile mill with machines running from morning to night. After the mill left, painters moved in and the workshops became studios and galleries.",
+            "ja": "ここはもと紡績工場で、機械が朝から晩まで動いていました。工場がなくなったあと画家たちが移り住み、アトリエやギャラリーになりました。"
+          },
+          "coordinate": {
+            "lat": 31.2497,
+            "lon": 121.4489
+          }
         },
         {
           "id": "sh-changhua-bridge",
-          "name": { "zh": "昌化路桥", "en": "Changhua Road Bridge", "ja": "昌化路橋" },
-          "story": { "zh": "站在桥上看苏州河。以前河上挤满运货的船，岸边是一座挨一座的工厂和仓库。", "en": "Look at Suzhou Creek from the bridge. It was once crowded with cargo boats, and the banks were lined with factories and warehouses.", "ja": "橋の上から蘇州河を見てみよう。むかしは荷物を運ぶ船でいっぱいで、岸には工場と倉庫がずらりと並んでいました。" },
-          "coordinate": { "lat": 31.2478, "lon": 121.4470 }
+          "name": {
+            "zh": "昌化路桥",
+            "en": "Changhua Road Bridge",
+            "ja": "昌化路橋"
+          },
+          "story": {
+            "zh": "站在桥上看苏州河。以前河上挤满运货的船，岸边是一座挨一座的工厂和仓库。",
+            "en": "Look at Suzhou Creek from the bridge. It was once crowded with cargo boats, and the banks were lined with factories and warehouses.",
+            "ja": "橋の上から蘇州河を見てみよう。むかしは荷物を運ぶ船でいっぱいで、岸には工場と倉庫がずらりと並んでいました。"
+          },
+          "coordinate": {
+            "lat": 31.2478,
+            "lon": 121.447
+          }
         },
         {
           "id": "sh-mengqing",
-          "name": { "zh": "梦清园", "en": "Mengqing Garden", "ja": "夢清園" },
-          "story": { "zh": "这座公园原来是一家啤酒厂。老厂房留了下来，现在用来讲苏州河是怎么从又黑又臭变干净的。", "en": "This park used to be a brewery. The old building was kept and now tells how Suzhou Creek went from black and smelly to clean.", "ja": "この公園はもとビール工場でした。古い建物は残され、いまは蘇州河がどうやってきれいになったかを伝えています。" },
-          "coordinate": { "lat": 31.2462, "lon": 121.4382 }
+          "name": {
+            "zh": "梦清园",
+            "en": "Mengqing Garden",
+            "ja": "夢清園"
+          },
+          "story": {
+            "zh": "这座公园原来是一家啤酒厂。老厂房留了下来，现在用来讲苏州河是怎么从又黑又臭变干净的。",
+            "en": "This park used to be a brewery. The old building was kept and now tells how Suzhou Creek went from black and smelly to clean.",
+            "ja": "この公園はもとビール工場でした。古い建物は残され、いまは蘇州河がどうやってきれいになったかを伝えています。"
+          },
+          "coordinate": {
+            "lat": 31.2462,
+            "lon": 121.4382
+          }
         }
       ],
       "verified": false
@@ -58,38 +137,103 @@
       "id": "sh-bund",
       "cityId": "shanghai",
       "lens": "history",
-      "title": { "zh": "外滩的房子为什么像外国的？", "en": "Why do the buildings on the Bund look foreign?", "ja": "外灘の建物は、なぜ外国みたいなの？" },
-      "area": { "zh": "黄浦区 · 外滩", "en": "Huangpu · The Bund", "ja": "黄浦区・外灘" },
+      "title": {
+        "zh": "外滩的房子为什么像外国的？",
+        "en": "Why do the buildings on the Bund look foreign?",
+        "ja": "外灘の建物は、なぜ外国みたいなの？"
+      },
+      "area": {
+        "zh": "黄浦区 · 外滩",
+        "en": "Huangpu · The Bund",
+        "ja": "黄浦区・外灘"
+      },
       "distanceKm": 1.5,
       "minutes": 90,
       "oneLiner": {
-        "young": { "zh": "很久以前，很多外国的船开到这里做生意，他们盖了自己国家样子的房子。", "en": "Long ago, ships from many countries came here to trade, and people built houses that looked like the ones back home.", "ja": "むかし、外国の船がたくさんここに来て商売をし、自分の国と同じ形の建物を建てました。" },
-        "middle": { "zh": "1843 年上海开埠后，外国商人在江边开银行、办洋行，照着自己国家的样子盖楼，所以外滩的房子像外国的。", "en": "After Shanghai opened as a treaty port in 1843, foreign merchants set up banks and trading houses by the river and built them in the styles of their home countries.", "ja": "1843年に上海が開港すると、外国の商人が川沿いに銀行や商社を開き、自分の国の様式で建物を建てました。" },
-        "older": { "zh": "外滩是近代上海对外贸易和金融的中心。银行、海关、洋行沿江排开，建筑风格各不相同，被叫作“万国建筑博览群”。", "en": "The Bund was the centre of trade and finance in modern Shanghai. Banks, the customs house and trading firms lined the river in many different styles, earning it the name 'a museum of international architecture'.", "ja": "外灘は近代上海の貿易と金融の中心でした。銀行、税関、商社が川沿いに並び、様式がそれぞれ違うため「万国建築博覧」と呼ばれます。" }
+        "young": {
+          "zh": "很久以前，很多外国的船开到这里做生意，他们盖了自己国家样子的房子。",
+          "en": "Long ago, ships from many countries came here to trade, and people built houses that looked like the ones back home.",
+          "ja": "むかし、外国の船がたくさんここに来て商売をし、自分の国と同じ形の建物を建てました。"
+        },
+        "middle": {
+          "zh": "1843 年上海开埠后，外国商人在江边开银行、办洋行，照着自己国家的样子盖楼，所以外滩的房子像外国的。",
+          "en": "After Shanghai opened as a treaty port in 1843, foreign merchants set up banks and trading houses by the river and built them in the styles of their home countries.",
+          "ja": "1843年に上海が開港すると、外国の商人が川沿いに銀行や商社を開き、自分の国の様式で建物を建てました。"
+        },
+        "older": {
+          "zh": "外滩是近代上海对外贸易和金融的中心。银行、海关、洋行沿江排开，建筑风格各不相同，被叫作“万国建筑博览群”。",
+          "en": "The Bund was the centre of trade and finance in modern Shanghai. Banks, the customs house and trading firms lined the river in many different styles, earning it the name 'a museum of international architecture'.",
+          "ja": "外灘は近代上海の貿易と金融の中心でした。銀行、税関、商社が川沿いに並び、様式がそれぞれ違うため「万国建築博覧」と呼ばれます。"
+        }
       },
       "question": {
-        "young": { "zh": "哪一座房子的屋顶你最喜欢？它像什么？", "en": "Which roof do you like best? What does it look like?", "ja": "どの屋根がいちばん好き？何に似ている？" },
-        "middle": { "zh": "为什么银行都喜欢把房子盖得又高又结实？", "en": "Why do banks like their buildings tall and solid?", "ja": "銀行はなぜ、高くてがっしりした建物を建てたがるのだろう？" },
-        "older": { "zh": "为什么大家都要挤在江边这一小段盖楼？", "en": "Why did everyone want to build on this one short stretch of riverbank?", "ja": "なぜみんな、この短い川沿いに集まって建てたのだろう？" }
+        "young": {
+          "zh": "哪一座房子的屋顶你最喜欢？它像什么？",
+          "en": "Which roof do you like best? What does it look like?",
+          "ja": "どの屋根がいちばん好き？何に似ている？"
+        },
+        "middle": {
+          "zh": "为什么银行都喜欢把房子盖得又高又结实？",
+          "en": "Why do banks like their buildings tall and solid?",
+          "ja": "銀行はなぜ、高くてがっしりした建物を建てたがるのだろう？"
+        },
+        "older": {
+          "zh": "为什么大家都要挤在江边这一小段盖楼？",
+          "en": "Why did everyone want to build on this one short stretch of riverbank?",
+          "ja": "なぜみんな、この短い川沿いに集まって建てたのだろう？"
+        }
       },
       "stops": [
         {
           "id": "sh-waibaidu",
-          "name": { "zh": "外白渡桥", "en": "Waibaidu Bridge", "ja": "外白渡橋" },
-          "story": { "zh": "这座钢桥 1907 年建成，已经一百多岁了。它架在苏州河流进黄浦江的地方。", "en": "This steel bridge was finished in 1907, so it is over a hundred years old. It stands where Suzhou Creek flows into the Huangpu River.", "ja": "この鉄の橋は1907年にできて、もう100歳をこえています。蘇州河が黄浦江に流れこむ場所にかかっています。" },
-          "coordinate": { "lat": 31.2450, "lon": 121.4905 }
+          "name": {
+            "zh": "外白渡桥",
+            "en": "Waibaidu Bridge",
+            "ja": "外白渡橋"
+          },
+          "story": {
+            "zh": "这座钢桥 1907 年建成，已经一百多岁了。它架在苏州河流进黄浦江的地方。",
+            "en": "This steel bridge was finished in 1907, so it is over a hundred years old. It stands where Suzhou Creek flows into the Huangpu River.",
+            "ja": "この鉄の橋は1907年にできて、もう100歳をこえています。蘇州河が黄浦江に流れこむ場所にかかっています。"
+          },
+          "coordinate": {
+            "lat": 31.245,
+            "lon": 121.4905
+          }
         },
         {
           "id": "sh-peace-hotel",
-          "name": { "zh": "和平饭店", "en": "Peace Hotel", "ja": "和平飯店" },
-          "story": { "zh": "绿色尖顶的这座楼 1929 年建成，原来叫沙逊大厦，是当时外滩最高的楼之一。", "en": "The building with the green pointed roof opened in 1929 as Sassoon House, one of the tallest on the Bund at the time.", "ja": "緑のとんがり屋根のこの建物は1929年にでき、もとはサッスーン・ハウスと呼ばれました。当時の外灘でとても高い建物のひとつでした。" },
-          "coordinate": { "lat": 31.2404, "lon": 121.4897 }
+          "name": {
+            "zh": "和平饭店",
+            "en": "Peace Hotel",
+            "ja": "和平飯店"
+          },
+          "story": {
+            "zh": "绿色尖顶的这座楼 1929 年建成，原来叫沙逊大厦，是当时外滩最高的楼之一。",
+            "en": "The building with the green pointed roof opened in 1929 as Sassoon House, one of the tallest on the Bund at the time.",
+            "ja": "緑のとんがり屋根のこの建物は1929年にでき、もとはサッスーン・ハウスと呼ばれました。当時の外灘でとても高い建物のひとつでした。"
+          },
+          "coordinate": {
+            "lat": 31.2404,
+            "lon": 121.4897
+          }
         },
         {
           "id": "sh-customs",
-          "name": { "zh": "海关大楼", "en": "Custom House", "ja": "税関ビル" },
-          "story": { "zh": "楼顶有一座大钟。海关管的是进出港口的货物：船带了什么进来、要交多少税，都归它管。", "en": "There is a big clock on top. Customs looks after goods entering and leaving the port: what a ship brings in and how much tax is owed.", "ja": "屋上に大きな時計があります。税関は港を出入りする荷物を管理します。船が何を運んできたか、税金はいくらかを決める役所です。" },
-          "coordinate": { "lat": 31.2379, "lon": 121.4899 }
+          "name": {
+            "zh": "海关大楼",
+            "en": "Custom House",
+            "ja": "税関ビル"
+          },
+          "story": {
+            "zh": "楼顶有一座大钟。海关管的是进出港口的货物：船带了什么进来、要交多少税，都归它管。",
+            "en": "There is a big clock on top. Customs looks after goods entering and leaving the port: what a ship brings in and how much tax is owed.",
+            "ja": "屋上に大きな時計があります。税関は港を出入りする荷物を管理します。船が何を運んできたか、税金はいくらかを決める役所です。"
+          },
+          "coordinate": {
+            "lat": 31.2379,
+            "lon": 121.4899
+          }
         }
       ],
       "verified": false
@@ -98,38 +242,103 @@
       "id": "os-kitchen",
       "cityId": "osaka",
       "lens": "industry",
-      "title": { "zh": "大阪为什么叫“天下的厨房”？", "en": "Why was Osaka called 'the nation's kitchen'?", "ja": "大阪はなぜ「天下の台所」と呼ばれたの？" },
-      "area": { "zh": "北区 · 中之岛", "en": "Kita · Nakanoshima", "ja": "北区・中之島" },
+      "title": {
+        "zh": "大阪为什么叫“天下的厨房”？",
+        "en": "Why was Osaka called 'the nation's kitchen'?",
+        "ja": "大阪はなぜ「天下の台所」と呼ばれたの？"
+      },
+      "area": {
+        "zh": "北区 · 中之岛",
+        "en": "Kita · Nakanoshima",
+        "ja": "北区・中之島"
+      },
       "distanceKm": 1.4,
       "minutes": 90,
       "oneLiner": {
-        "young": { "zh": "以前全日本的大米都用船运到这里来卖，所以大阪像一个大厨房。", "en": "Rice from all over Japan used to come here by boat to be sold, so Osaka was like one big kitchen.", "ja": "むかし、日本じゅうのお米が船でここに運ばれて売られました。だから大阪は大きな台所みたいだったんだよ。" },
-        "middle": { "zh": "江户时代，各地的大名把大米和特产用船运到中之岛的仓库里卖掉换钱。全国的吃的都聚在大阪，所以叫“天下的厨房”。", "en": "In the Edo period, lords from across Japan shipped rice and local goods to warehouses on Nakanoshima to sell. With the country's food gathered here, Osaka became 'the nation's kitchen'.", "ja": "江戸時代、各地の大名は米や特産品を船で中之島の蔵に運び、売ってお金にかえました。全国の食べ物が集まったので「天下の台所」と呼ばれました。" },
-        "older": { "zh": "大阪河道多、通海，各藩在中之岛设“藏屋敷”存放年贡米。堂岛的米市场在 1730 年得到幕府承认，人们在这里买卖“还没运到的米”，被认为是世界上最早的期货市场之一。", "en": "Osaka had many waterways and access to the sea, so the domains kept warehouses on Nakanoshima for their tax rice. The Dojima rice market, recognised by the shogunate in 1730, traded rice that had not yet arrived and is regarded as one of the world's first futures markets.", "ja": "大阪は川が多く海にもつながり、各藩は中之島に蔵屋敷を置いて年貢米を保管しました。堂島の米市場は1730年に幕府に公認され、まだ届いていない米を売買したため、世界でもっとも早い先物市場のひとつとされています。" }
+        "young": {
+          "zh": "以前全日本的大米都用船运到这里来卖，所以大阪像一个大厨房。",
+          "en": "Rice from all over Japan used to come here by boat to be sold, so Osaka was like one big kitchen.",
+          "ja": "むかし、日本じゅうのお米が船でここに運ばれて売られました。だから大阪は大きな台所みたいだったんだよ。"
+        },
+        "middle": {
+          "zh": "江户时代，各地的大名把大米和特产用船运到中之岛的仓库里卖掉换钱。全国的吃的都聚在大阪，所以叫“天下的厨房”。",
+          "en": "In the Edo period, lords from across Japan shipped rice and local goods to warehouses on Nakanoshima to sell. With the country's food gathered here, Osaka became 'the nation's kitchen'.",
+          "ja": "江戸時代、各地の大名は米や特産品を船で中之島の蔵に運び、売ってお金にかえました。全国の食べ物が集まったので「天下の台所」と呼ばれました。"
+        },
+        "older": {
+          "zh": "大阪河道多、通海，各藩在中之岛设“藏屋敷”存放年贡米。堂岛的米市场在 1730 年得到幕府承认，人们在这里买卖“还没运到的米”，被认为是世界上最早的期货市场之一。",
+          "en": "Osaka had many waterways and access to the sea, so the domains kept warehouses on Nakanoshima for their tax rice. The Dojima rice market, recognised by the shogunate in 1730, traded rice that had not yet arrived and is regarded as one of the world's first futures markets.",
+          "ja": "大阪は川が多く海にもつながり、各藩は中之島に蔵屋敷を置いて年貢米を保管しました。堂島の米市場は1730年に幕府に公認され、まだ届いていない米を売買したため、世界でもっとも早い先物市場のひとつとされています。"
+        }
       },
       "question": {
-        "young": { "zh": "你看到几条河？船可以开到哪里去？", "en": "How many rivers can you see? Where could a boat go from here?", "ja": "川はいくつ見える？船はどこまで行けるかな？" },
-        "middle": { "zh": "为什么大家要把米运到同一个地方卖？", "en": "Why did everyone bring their rice to the same place to sell?", "ja": "どうしてみんな、お米を同じ場所に運んで売ったのだろう？" },
-        "older": { "zh": "米还没运到就先买卖，这样做有什么好处和风险？", "en": "What are the benefits and risks of trading rice before it arrives?", "ja": "まだ届いていない米を売り買いすると、どんな良い点と危ない点がある？" }
+        "young": {
+          "zh": "你看到几条河？船可以开到哪里去？",
+          "en": "How many rivers can you see? Where could a boat go from here?",
+          "ja": "川はいくつ見える？船はどこまで行けるかな？"
+        },
+        "middle": {
+          "zh": "为什么大家要把米运到同一个地方卖？",
+          "en": "Why did everyone bring their rice to the same place to sell?",
+          "ja": "どうしてみんな、お米を同じ場所に運んで売ったのだろう？"
+        },
+        "older": {
+          "zh": "米还没运到就先买卖，这样做有什么好处和风险？",
+          "en": "What are the benefits and risks of trading rice before it arrives?",
+          "ja": "まだ届いていない米を売り買いすると、どんな良い点と危ない点がある？"
+        }
       },
       "stops": [
         {
           "id": "os-yodoyabashi",
-          "name": { "zh": "淀屋桥", "en": "Yodoyabashi Bridge", "ja": "淀屋橋" },
-          "story": { "zh": "这座桥的名字来自一位叫淀屋的大商人，最早的桥是他家出钱修的。他家门口就是最早的米市。", "en": "The bridge is named after a great merchant family, Yodoya, who paid for the first bridge here. The earliest rice market was held in front of their shop.", "ja": "この橋の名前は、大商人の淀屋からきています。最初の橋は淀屋がお金を出してかけました。店の前がいちばん古い米市でした。" },
-          "coordinate": { "lat": 34.6929, "lon": 135.5012 }
+          "name": {
+            "zh": "淀屋桥",
+            "en": "Yodoyabashi Bridge",
+            "ja": "淀屋橋"
+          },
+          "story": {
+            "zh": "这座桥的名字来自一位叫淀屋的大商人，最早的桥是他家出钱修的。他家门口就是最早的米市。",
+            "en": "The bridge is named after a great merchant family, Yodoya, who paid for the first bridge here. The earliest rice market was held in front of their shop.",
+            "ja": "この橋の名前は、大商人の淀屋からきています。最初の橋は淀屋がお金を出してかけました。店の前がいちばん古い米市でした。"
+          },
+          "coordinate": {
+            "lat": 34.6929,
+            "lon": 135.5012
+          }
         },
         {
           "id": "os-dojima-rice",
-          "name": { "zh": "堂岛米市场遗址", "en": "Dojima Rice Exchange site", "ja": "堂島米市場跡" },
-          "story": { "zh": "这里立着纪念碑。三百年前，商人们每天在这里喊价买卖大米。", "en": "A monument stands here. Three hundred years ago merchants shouted prices here every day, buying and selling rice.", "ja": "ここには記念碑があります。300年前、商人たちは毎日ここで声をあげて米を売り買いしました。" },
-          "coordinate": { "lat": 34.6957, "lon": 135.4985 }
+          "name": {
+            "zh": "堂岛米市场遗址",
+            "en": "Dojima Rice Exchange site",
+            "ja": "堂島米市場跡"
+          },
+          "story": {
+            "zh": "这里立着纪念碑。三百年前，商人们每天在这里喊价买卖大米。",
+            "en": "A monument stands here. Three hundred years ago merchants shouted prices here every day, buying and selling rice.",
+            "ja": "ここには記念碑があります。300年前、商人たちは毎日ここで声をあげて米を売り買いしました。"
+          },
+          "coordinate": {
+            "lat": 34.6957,
+            "lon": 135.4985
+          }
         },
         {
           "id": "os-nakanoshima",
-          "name": { "zh": "中之岛", "en": "Nakanoshima", "ja": "中之島" },
-          "story": { "zh": "这个夹在两条河中间的小岛，以前排满了各地运米来的仓库。现在是图书馆、公会堂和美术馆。", "en": "This narrow island between two rivers was once lined with warehouses for rice from all over Japan. Today it holds a library, a public hall and museums.", "ja": "二つの川にはさまれたこの細長い島には、むかし各地の米を入れる蔵が並んでいました。いまは図書館、公会堂、美術館があります。" },
-          "coordinate": { "lat": 34.6935, "lon": 135.5038 }
+          "name": {
+            "zh": "中之岛",
+            "en": "Nakanoshima",
+            "ja": "中之島"
+          },
+          "story": {
+            "zh": "这个夹在两条河中间的小岛，以前排满了各地运米来的仓库。现在是图书馆、公会堂和美术馆。",
+            "en": "This narrow island between two rivers was once lined with warehouses for rice from all over Japan. Today it holds a library, a public hall and museums.",
+            "ja": "二つの川にはさまれたこの細長い島には、むかし各地の米を入れる蔵が並んでいました。いまは図書館、公会堂、美術館があります。"
+          },
+          "coordinate": {
+            "lat": 34.6935,
+            "lon": 135.5038
+          }
         }
       ],
       "verified": false
@@ -138,38 +347,1048 @@
       "id": "os-dotonbori",
       "cityId": "osaka",
       "lens": "history",
-      "title": { "zh": "道顿堀这条河是谁挖的？", "en": "Who dug the Dotonbori canal?", "ja": "道頓堀は、だれが掘ったの？" },
-      "area": { "zh": "中央区 · 道顿堀", "en": "Chuo · Dotonbori", "ja": "中央区・道頓堀" },
+      "title": {
+        "zh": "道顿堀这条河是谁挖的？",
+        "en": "Who dug the Dotonbori canal?",
+        "ja": "道頓堀は、だれが掘ったの？"
+      },
+      "area": {
+        "zh": "中央区 · 道顿堀",
+        "en": "Chuo · Dotonbori",
+        "ja": "中央区・道頓堀"
+      },
       "distanceKm": 1.0,
       "minutes": 60,
       "oneLiner": {
-        "young": { "zh": "这条河不是自己长出来的，是四百年前人们一铲一铲挖出来的。", "en": "This river did not grow by itself. People dug it shovel by shovel four hundred years ago.", "ja": "この川は自然にできたのではなく、400年前に人がスコップで掘ったんだよ。" },
-        "middle": { "zh": "1612 年，一位叫安井道顿的人开始挖这条运河，1615 年挖成。为了纪念他，河就叫道顿堀。", "en": "In 1612 a man named Yasui Doton began digging this canal, and it was finished in 1615. It was named Dotonbori in his memory.", "ja": "1612年、安井道頓という人がこの運河を掘りはじめ、1615年に完成しました。その名前をとって道頓堀と呼ばれます。" },
-        "older": { "zh": "道顿堀是江户初期开挖的运河。河挖好后，官府把戏棚子集中到南岸，这里慢慢变成了看戏、吃饭的热闹街区，一直热闹到今天。", "en": "Dotonbori is a canal dug in the early Edo period. Once it was finished, the authorities gathered the theatres on its south bank, and the area grew into a lively district for plays and food that is still busy today.", "ja": "道頓堀は江戸時代のはじめに掘られた運河です。完成後、芝居小屋が南岸に集められ、芝居と食べ物のにぎやかな街になり、いまも続いています。" }
+        "young": {
+          "zh": "这条河不是自己长出来的，是四百年前人们一铲一铲挖出来的。",
+          "en": "This river did not grow by itself. People dug it shovel by shovel four hundred years ago.",
+          "ja": "この川は自然にできたのではなく、400年前に人がスコップで掘ったんだよ。"
+        },
+        "middle": {
+          "zh": "1612 年，一位叫安井道顿的人开始挖这条运河，1615 年挖成。为了纪念他，河就叫道顿堀。",
+          "en": "In 1612 a man named Yasui Doton began digging this canal, and it was finished in 1615. It was named Dotonbori in his memory.",
+          "ja": "1612年、安井道頓という人がこの運河を掘りはじめ、1615年に完成しました。その名前をとって道頓堀と呼ばれます。"
+        },
+        "older": {
+          "zh": "道顿堀是江户初期开挖的运河。河挖好后，官府把戏棚子集中到南岸，这里慢慢变成了看戏、吃饭的热闹街区，一直热闹到今天。",
+          "en": "Dotonbori is a canal dug in the early Edo period. Once it was finished, the authorities gathered the theatres on its south bank, and the area grew into a lively district for plays and food that is still busy today.",
+          "ja": "道頓堀は江戸時代のはじめに掘られた運河です。完成後、芝居小屋が南岸に集められ、芝居と食べ物のにぎやかな街になり、いまも続いています。"
+        }
       },
       "question": {
-        "young": { "zh": "河上的船现在载的是什么？", "en": "What do the boats on the river carry now?", "ja": "いま、川の船は何をのせているかな？" },
-        "middle": { "zh": "为什么以前的人要花力气挖一条河？", "en": "Why would people go to the trouble of digging a river?", "ja": "むかしの人は、なぜ苦労して川を掘ったのだろう？" },
-        "older": { "zh": "一条运货的河，为什么后来变成了吃饭和玩的地方？", "en": "How did a cargo canal turn into a place for eating and fun?", "ja": "荷物を運ぶ川が、なぜ食事と遊びの場所になったのだろう？" }
+        "young": {
+          "zh": "河上的船现在载的是什么？",
+          "en": "What do the boats on the river carry now?",
+          "ja": "いま、川の船は何をのせているかな？"
+        },
+        "middle": {
+          "zh": "为什么以前的人要花力气挖一条河？",
+          "en": "Why would people go to the trouble of digging a river?",
+          "ja": "むかしの人は、なぜ苦労して川を掘ったのだろう？"
+        },
+        "older": {
+          "zh": "一条运货的河，为什么后来变成了吃饭和玩的地方？",
+          "en": "How did a cargo canal turn into a place for eating and fun?",
+          "ja": "荷物を運ぶ川が、なぜ食事と遊びの場所になったのだろう？"
+        }
       },
       "stops": [
         {
           "id": "os-ebisubashi",
-          "name": { "zh": "戎桥", "en": "Ebisubashi Bridge", "ja": "戎橋" },
-          "story": { "zh": "站在桥上往下看，这就是道顿堀。河两边的大招牌是大阪最有名的风景之一。", "en": "Look down from the bridge: this is Dotonbori. The giant signs on both banks are one of Osaka's best-known sights.", "ja": "橋の上から下を見てみよう。これが道頓堀です。両岸の大きな看板は、大阪でいちばん有名な景色のひとつです。" },
-          "coordinate": { "lat": 34.6691, "lon": 135.5013 }
+          "name": {
+            "zh": "戎桥",
+            "en": "Ebisubashi Bridge",
+            "ja": "戎橋"
+          },
+          "story": {
+            "zh": "站在桥上往下看，这就是道顿堀。河两边的大招牌是大阪最有名的风景之一。",
+            "en": "Look down from the bridge: this is Dotonbori. The giant signs on both banks are one of Osaka's best-known sights.",
+            "ja": "橋の上から下を見てみよう。これが道頓堀です。両岸の大きな看板は、大阪でいちばん有名な景色のひとつです。"
+          },
+          "coordinate": {
+            "lat": 34.6691,
+            "lon": 135.5013
+          }
         },
         {
           "id": "os-hozenji",
-          "name": { "zh": "法善寺横丁", "en": "Hozenji Yokocho", "ja": "法善寺横丁" },
-          "story": { "zh": "小巷子里有一尊长满青苔的不动明王像。人们许愿时往它身上浇水，日子久了就长满了青苔。", "en": "In this alley stands a statue of Fudo Myo-o covered in moss. People pour water over it when they make a wish, and over the years the moss grew.", "ja": "この路地には、こけにおおわれた不動明王の像があります。願いごとをするときに水をかけるので、長い年月でこけが生えました。" },
-          "coordinate": { "lat": 34.6679, "lon": 135.5023 }
+          "name": {
+            "zh": "法善寺横丁",
+            "en": "Hozenji Yokocho",
+            "ja": "法善寺横丁"
+          },
+          "story": {
+            "zh": "小巷子里有一尊长满青苔的不动明王像。人们许愿时往它身上浇水，日子久了就长满了青苔。",
+            "en": "In this alley stands a statue of Fudo Myo-o covered in moss. People pour water over it when they make a wish, and over the years the moss grew.",
+            "ja": "この路地には、こけにおおわれた不動明王の像があります。願いごとをするときに水をかけるので、長い年月でこけが生えました。"
+          },
+          "coordinate": {
+            "lat": 34.6679,
+            "lon": 135.5023
+          }
         },
         {
           "id": "os-nipponbashi",
-          "name": { "zh": "日本桥", "en": "Nipponbashi Bridge", "ja": "日本橋" },
-          "story": { "zh": "这座桥在道顿堀的东边。江户时代，桥南一带有很多旅店，是旅人进出大阪的路口。", "en": "This bridge is at the eastern end of Dotonbori. In the Edo period the area south of it was full of inns, a gateway for travellers entering and leaving Osaka.", "ja": "この橋は道頓堀の東にあります。江戸時代、橋の南には宿屋が多く、旅人が大阪に出入りする入口でした。" },
-          "coordinate": { "lat": 34.6686, "lon": 135.5066 }
+          "name": {
+            "zh": "日本桥",
+            "en": "Nipponbashi Bridge",
+            "ja": "日本橋"
+          },
+          "story": {
+            "zh": "这座桥在道顿堀的东边。江户时代，桥南一带有很多旅店，是旅人进出大阪的路口。",
+            "en": "This bridge is at the eastern end of Dotonbori. In the Edo period the area south of it was full of inns, a gateway for travellers entering and leaving Osaka.",
+            "ja": "この橋は道頓堀の東にあります。江戸時代、橋の南には宿屋が多く、旅人が大阪に出入りする入口でした。"
+          },
+          "coordinate": {
+            "lat": 34.6686,
+            "lon": 135.5066
+          }
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "sh-lujiazui",
+      "cityId": "shanghai",
+      "lens": "planning",
+      "title": {
+        "zh": "陆家嘴以前是什么样？",
+        "en": "What was Lujiazui like before the towers?",
+        "ja": "陸家嘴は、むかしどんな場所だった？"
+      },
+      "area": {
+        "zh": "浦东新区 · 陆家嘴",
+        "en": "Pudong · Lujiazui",
+        "ja": "浦東新区・陸家嘴"
+      },
+      "distanceKm": 1.8,
+      "minutes": 90,
+      "oneLiner": {
+        "young": {
+          "zh": "三十多年前，这里没有高楼，是农田、仓库和矮矮的老房子。",
+          "en": "A little over thirty years ago there were no towers here, just fields, warehouses and low old houses.",
+          "ja": "30年ほど前、ここに高いビルはなく、畑と倉庫と低い古い家がありました。"
+        },
+        "middle": {
+          "zh": "1990 年国家决定开发浦东。人们先修桥、挖隧道把江两边连起来，再一栋一栋盖起高楼。",
+          "en": "In 1990 China decided to develop Pudong. First came bridges and tunnels linking the two banks, then the towers went up one by one.",
+          "ja": "1990年、国は浦東の開発を決めました。まず橋とトンネルで川の両岸をつなぎ、それからビルを一つずつ建てました。"
+        },
+        "older": {
+          "zh": "浦西老城区已经很挤，上海需要新的空间。浦东隔着一条江、地价便宜，被规划成金融贸易区，银行和公司集中到了陆家嘴。",
+          "en": "The old city west of the river was crowded and Shanghai needed room. Pudong, just across the water with cheap land, was planned as a finance and trade zone, and banks and companies gathered in Lujiazui.",
+          "ja": "川の西の旧市街はとても混んでいて、上海には新しい土地が必要でした。川をはさんだ浦東は土地が安く、金融貿易区として計画され、銀行や会社が陸家嘴に集まりました。"
+        }
+      },
+      "question": {
+        "young": {
+          "zh": "你能数出几栋高楼？哪一栋最高？",
+          "en": "How many towers can you count? Which is the tallest?",
+          "ja": "高いビルはいくつ数えられる？いちばん高いのはどれ？"
+        },
+        "middle": {
+          "zh": "为什么要先修桥和隧道，再盖楼？",
+          "en": "Why build bridges and tunnels before the towers?",
+          "ja": "なぜビルより先に橋とトンネルを作ったのだろう？"
+        },
+        "older": {
+          "zh": "为什么银行喜欢挤在同一个地方？",
+          "en": "Why do banks like to cluster in one place?",
+          "ja": "銀行はなぜ同じ場所に集まりたがるのだろう？"
+        }
+      },
+      "stops": [
+        {
+          "id": "sh-pearl",
+          "name": {
+            "zh": "东方明珠",
+            "en": "Oriental Pearl Tower",
+            "ja": "東方明珠塔"
+          },
+          "story": {
+            "zh": "这座电视塔 1994 年建成，是陆家嘴最早的高塔之一。那时候周围还很空。",
+            "en": "This TV tower was completed in 1994, one of the first tall structures in Lujiazui. The area around it was still mostly empty.",
+            "ja": "このテレビ塔は1994年に完成し、陸家嘴で最初の高い塔のひとつでした。当時、まわりはまだ空き地が多かったのです。"
+          },
+          "coordinate": {
+            "lat": 31.2397,
+            "lon": 121.4998
+          }
+        },
+        {
+          "id": "sh-central-green",
+          "name": {
+            "zh": "陆家嘴中心绿地",
+            "en": "Lujiazui Central Green",
+            "ja": "陸家嘴中心緑地"
+          },
+          "story": {
+            "zh": "高楼中间特意留了一大块草地。这里原来挤满了老房子，居民搬走后建成了公园。",
+            "en": "A big lawn was deliberately kept among the towers. This spot used to be packed with old houses; after the residents moved, it became a park.",
+            "ja": "ビルの間に、わざと大きな芝生が残されました。もとは古い家がぎっしり建っていて、住民が移ったあと公園になりました。"
+          },
+          "coordinate": {
+            "lat": 31.2368,
+            "lon": 121.5033
+          }
+        },
+        {
+          "id": "sh-riverside",
+          "name": {
+            "zh": "滨江大道",
+            "en": "Riverside Promenade",
+            "ja": "濱江大道"
+          },
+          "story": {
+            "zh": "站在江边看对岸的外滩。一边是一百年前的老楼，一边是三十年里盖起来的新楼。",
+            "en": "Stand by the river and look across at the Bund: hundred-year-old buildings on one side, towers built in thirty years on the other.",
+            "ja": "川べりから向こう岸の外灘を見てみよう。向こうは100年前の建物、こちらは30年で建った新しいビルです。"
+          },
+          "coordinate": {
+            "lat": 31.2385,
+            "lon": 121.4972
+          }
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "sh-shikumen",
+      "cityId": "shanghai",
+      "lens": "culture",
+      "title": {
+        "zh": "石库门是什么样的房子？",
+        "en": "What is a shikumen house?",
+        "ja": "石庫門って、どんな家？"
+      },
+      "area": {
+        "zh": "黄浦区 · 新天地",
+        "en": "Huangpu · Xintiandi",
+        "ja": "黄浦区・新天地"
+      },
+      "distanceKm": 0.8,
+      "minutes": 60,
+      "oneLiner": {
+        "young": {
+          "zh": "石库门就是有石头门框和黑色大木门的老房子，很多家人住在一条弄堂里。",
+          "en": "A shikumen is an old house with a stone door frame and a big black wooden door. Many families lived along one lane.",
+          "ja": "石庫門は、石の門わくと黒い大きな木のとびらがある古い家です。一本の路地にたくさんの家族が住んでいました。"
+        },
+        "middle": {
+          "zh": "一百多年前上海人口越来越多，人们把房子一排排连着盖，省地方。门是中国式的院门，排法却像欧洲的联排房，所以说它中西合璧。",
+          "en": "Over a century ago Shanghai's population kept growing, so houses were built in connected rows to save space. The gate is Chinese in style but the rows resemble European terraces, a mix of East and West.",
+          "ja": "100年以上前、上海の人口が増えつづけたので、家をつなげて並べ、土地を節約しました。門は中国式、並び方はヨーロッパの長屋に似ていて、東西がまざった家です。"
+        },
+        "older": {
+          "zh": "石库门是上海最有代表性的老住宅。后来一栋房子常常住进好几户，厨房、楼梯大家合用。新天地把一片石库门改成了商店和餐厅，外墙留着，里面换了用途。",
+          "en": "Shikumen are Shanghai's most characteristic old housing. Over time a single house often held several families sharing the kitchen and stairs. Xintiandi turned a block of them into shops and restaurants, keeping the walls and changing the use.",
+          "ja": "石庫門は上海を代表する古い住宅です。のちに一軒に何家族も住み、台所や階段を共用しました。新天地はその一角を店やレストランに変え、外壁は残して中の使い方を変えました。"
+        }
+      },
+      "question": {
+        "young": {
+          "zh": "你找到几扇黑色的大门？门上面刻了什么花纹？",
+          "en": "How many black doors can you find? What patterns are carved above them?",
+          "ja": "黒いとびらはいくつ見つかる？上にはどんなもようがある？"
+        },
+        "middle": {
+          "zh": "好几家人共用一个厨房，会发生什么事？",
+          "en": "What happens when several families share one kitchen?",
+          "ja": "何家族もが一つの台所を使うと、どんなことが起きる？"
+        },
+        "older": {
+          "zh": "老房子改成商店，是保护还是改变？你怎么看？",
+          "en": "Is turning old houses into shops preservation or change? What do you think?",
+          "ja": "古い家を店に変えるのは、保存？それとも変化？どう思う？"
+        }
+      },
+      "stops": [
+        {
+          "id": "sh-xintiandi",
+          "name": {
+            "zh": "新天地北里",
+            "en": "Xintiandi North Block",
+            "ja": "新天地北里"
+          },
+          "story": {
+            "zh": "看门框：两根石柱加一根石梁，中间是黑漆木门，门楣上常有雕花。这种门就叫石库门。",
+            "en": "Look at the doorway: two stone posts and a stone lintel around a black-lacquered wooden door, often with carving above. This kind of gate is called a shikumen.",
+            "ja": "門を見てみよう。二本の石の柱と石のはり、まん中に黒ぬりの木のとびら。上にはよく彫刻があります。この門を石庫門といいます。"
+          },
+          "coordinate": {
+            "lat": 31.2222,
+            "lon": 121.4752
+          }
+        },
+        {
+          "id": "sh-open-house",
+          "name": {
+            "zh": "石库门屋里厢博物馆",
+            "en": "Shikumen Open House Museum",
+            "ja": "石庫門屋里廂博物館"
+          },
+          "story": {
+            "zh": "里面按一百年前一户人家的样子布置：客堂间、灶披间、亭子间。看看每个房间有多大。",
+            "en": "Inside it is furnished like a home a century ago: the parlour, the kitchen, the tiny 'pavilion room'. Notice how big each room is.",
+            "ja": "中は100年前の家のように再現されています。客間、台所、小さな「亭子間」。部屋の大きさを見てみよう。"
+          },
+          "coordinate": {
+            "lat": 31.2218,
+            "lon": 121.4748
+          }
+        },
+        {
+          "id": "sh-taipingqiao",
+          "name": {
+            "zh": "太平桥公园",
+            "en": "Taipingqiao Park",
+            "ja": "太平橋公園"
+          },
+          "story": {
+            "zh": "这片湖和绿地是后来挖的。这里原来也是成片的老弄堂。",
+            "en": "The lake and lawns were made later. This area was once rows of old lane houses too.",
+            "ja": "この池と緑地はあとで作られました。ここも、もとは古い路地の家が並んでいました。"
+          },
+          "coordinate": {
+            "lat": 31.2203,
+            "lon": 121.4772
+          }
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "sh-people-square",
+      "cityId": "shanghai",
+      "lens": "civic",
+      "title": {
+        "zh": "人民广场周围的大房子是干什么的？",
+        "en": "What are the big buildings around People's Square for?",
+        "ja": "人民広場のまわりの大きな建物は、何をするところ？"
+      },
+      "area": {
+        "zh": "黄浦区 · 人民广场",
+        "en": "Huangpu · People's Square",
+        "ja": "黄浦区・人民広場"
+      },
+      "distanceKm": 1.2,
+      "minutes": 90,
+      "oneLiner": {
+        "young": {
+          "zh": "广场周围有管城市的市政府、放宝贝的博物馆，还有讲城市长大故事的展览馆。",
+          "en": "Around the square are the city government that runs the city, a museum full of treasures, and a hall that tells how the city grew.",
+          "ja": "広場のまわりには、街を動かす市役所、宝物をしまう博物館、街の成長を伝える展示館があります。"
+        },
+        "middle": {
+          "zh": "这里以前是跑马厅，只有少数人能进去玩。后来改成了所有人都能来的广场和公园，周围盖起了为大家服务的房子。",
+          "en": "This used to be a racecourse where only a few could go. It later became a square and park open to everyone, ringed by buildings that serve the public.",
+          "ja": "ここはむかし競馬場で、入れる人は少しだけでした。のちにだれでも来られる広場と公園になり、まわりにみんなのための建物ができました。"
+        },
+        "older": {
+          "zh": "城市把政府、博物馆、剧院、规划馆和地铁换乘站放在同一个中心，方便人们办事、参观和出行。一座城市的中心放什么，能看出它看重什么。",
+          "en": "The city put government, museum, theatre, planning hall and a metro interchange in one centre so people can get things done, visit and travel easily. What a city places at its centre shows what it values.",
+          "ja": "街は、市役所、博物館、劇場、都市計画館、地下鉄の乗りかえ駅を一つの中心に集め、用事や見学や移動を便利にしました。街の中心に何を置くかで、その街が何を大切にしているかがわかります。"
+        }
+      },
+      "question": {
+        "young": {
+          "zh": "哪座房子的样子最特别？它像什么？",
+          "en": "Which building looks most unusual? What does it remind you of?",
+          "ja": "いちばん変わった形の建物はどれ？何に似ている？"
+        },
+        "middle": {
+          "zh": "市政府每天要管哪些事？你能说出三件吗？",
+          "en": "What does a city government look after every day? Can you name three things?",
+          "ja": "市役所は毎日どんな仕事をしている？三つ言える？"
+        },
+        "older": {
+          "zh": "如果让你设计城市中心，你会放哪三样东西？",
+          "en": "If you designed a city centre, which three things would you put there?",
+          "ja": "街の中心を設計するなら、どの三つを置く？"
+        }
+      },
+      "stops": [
+        {
+          "id": "sh-city-gov",
+          "name": {
+            "zh": "上海市人民政府",
+            "en": "Shanghai Municipal Government",
+            "ja": "上海市人民政府"
+          },
+          "story": {
+            "zh": "这里是管理整座城市的地方：修路、办学校、通地铁、管垃圾，都要在这里做决定。",
+            "en": "This is where the whole city is run: roads, schools, metro lines and waste are all decided here.",
+            "ja": "ここは街全体を動かす場所です。道路、学校、地下鉄、ごみのことなどが、ここで決められます。"
+          },
+          "coordinate": {
+            "lat": 31.2304,
+            "lon": 121.4737
+          }
+        },
+        {
+          "id": "sh-museum",
+          "name": {
+            "zh": "上海博物馆",
+            "en": "Shanghai Museum",
+            "ja": "上海博物館"
+          },
+          "story": {
+            "zh": "从远处看，它像一只古代的青铜鼎：下面是方的，上面是圆的。里面收着几千年前的青铜器、瓷器和书画。",
+            "en": "From afar it looks like an ancient bronze ding vessel: square below, round above. Inside are bronzes, ceramics and paintings, some thousands of years old.",
+            "ja": "遠くから見ると、古代の青銅の鼎に似ています。下が四角、上が丸です。中には何千年も前の青銅器や、陶磁器、書画があります。"
+          },
+          "coordinate": {
+            "lat": 31.2283,
+            "lon": 121.4755
+          }
+        },
+        {
+          "id": "sh-planning-hall",
+          "name": {
+            "zh": "上海城市规划展示馆",
+            "en": "Urban Planning Exhibition Center",
+            "ja": "上海城市計画展示館"
+          },
+          "story": {
+            "zh": "里面有一个巨大的城市模型，能找到自己家在哪里，也能看到城市以后打算怎么长。",
+            "en": "Inside is a huge model of the city. You can find where you live and see how the city plans to grow.",
+            "ja": "中には巨大な街の模型があります。自分の家をさがしたり、街がこれからどう成長するかを見たりできます。"
+          },
+          "coordinate": {
+            "lat": 31.232,
+            "lon": 121.4758
+          }
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "sh-wukang",
+      "cityId": "shanghai",
+      "lens": "nature",
+      "title": {
+        "zh": "武康路的树为什么长成这样？",
+        "en": "Why do the trees on Wukang Road look like this?",
+        "ja": "武康路の木は、なぜこんな形なの？"
+      },
+      "area": {
+        "zh": "徐汇区 · 武康路",
+        "en": "Xuhui · Wukang Road",
+        "ja": "徐匯区・武康路"
+      },
+      "distanceKm": 1.2,
+      "minutes": 60,
+      "oneLiner": {
+        "young": {
+          "zh": "路两边的大树叫悬铃木，果子像一个个小铃铛挂在树上。",
+          "en": "The big trees along the road are plane trees. Their fruits hang like little bells.",
+          "ja": "道の両側の大きな木はプラタナスです。実は小さな鈴のようにぶらさがっています。"
+        },
+        "middle": {
+          "zh": "大家叫它“法国梧桐”，其实它不是梧桐，学名叫悬铃木。它长得快、叶子大、不怕修剪，很适合种在路边遮太阳。",
+          "en": "People call it the 'French parasol tree', but it is really a plane tree. It grows fast, has big leaves and tolerates pruning, so it is ideal for shading streets.",
+          "ja": "「フランスあおぎり」と呼ばれますが、本当はプラタナスです。成長が早く、葉が大きく、せん定に強いので、道に日かげを作るのにぴったりです。"
+        },
+        "older": {
+          "zh": "行道树是城市有意种下的：夏天遮阴降温，叶子能挡灰尘。园林工人把树修成杯子的形状，让枝条向两边伸，既不碰电线，又能在路中间合拢成绿色的隧道。",
+          "en": "Street trees are planted on purpose: they shade and cool the street in summer and their leaves trap dust. Gardeners prune them into a cup shape so branches spread sideways, clearing the wires and meeting over the road like a green tunnel.",
+          "ja": "街路樹はわざと植えられたものです。夏は日かげを作って涼しくし、葉はほこりを受けとめます。枝が横に広がるようコップの形に切り、電線をよけながら道の上で緑のトンネルになります。"
+        }
+      },
+      "question": {
+        "young": {
+          "zh": "捡一片叶子，它像不像你的手掌？",
+          "en": "Pick up a leaf. Does it look like your hand?",
+          "ja": "葉っぱを一枚ひろってみよう。手のひらに似ている？"
+        },
+        "middle": {
+          "zh": "树皮为什么一块一块地掉？",
+          "en": "Why does the bark peel off in patches?",
+          "ja": "木の皮は、なぜまだらにはがれるのだろう？"
+        },
+        "older": {
+          "zh": "如果这条路上没有树，夏天会有什么不同？",
+          "en": "How would summer on this road differ without the trees?",
+          "ja": "この道に木がなかったら、夏はどうちがうだろう？"
+        }
+      },
+      "stops": [
+        {
+          "id": "sh-wukang-mansion",
+          "name": {
+            "zh": "武康大楼",
+            "en": "Wukang Mansion",
+            "ja": "武康大楼"
+          },
+          "story": {
+            "zh": "这栋楼 1924 年建成，尖尖的一头对着路口，像一艘开过来的大船。",
+            "en": "Finished in 1924, this building points its narrow end at the junction like a great ship sailing toward you.",
+            "ja": "1924年にできた建物です。とがった先が交差点に向いていて、大きな船がこちらに進んでくるようです。"
+          },
+          "coordinate": {
+            "lat": 31.2049,
+            "lon": 121.4378
+          }
+        },
+        {
+          "id": "sh-bajin",
+          "name": {
+            "zh": "巴金故居",
+            "en": "Ba Jin's Former Residence",
+            "ja": "巴金故居"
+          },
+          "story": {
+            "zh": "作家巴金在这座小楼里住了几十年，很多书是在这里写的。院子里也有大树。",
+            "en": "The writer Ba Jin lived in this house for decades and wrote many of his books here. The garden has big trees too.",
+            "ja": "作家の巴金は、この家に何十年も住み、多くの本をここで書きました。庭にも大きな木があります。"
+          },
+          "coordinate": {
+            "lat": 31.2087,
+            "lon": 121.4353
+          }
+        },
+        {
+          "id": "sh-wukang-anfu",
+          "name": {
+            "zh": "武康路安福路口",
+            "en": "Wukang Road at Anfu Road",
+            "ja": "武康路・安福路の角"
+          },
+          "story": {
+            "zh": "抬头看，两边的树枝在路中间碰到一起。夏天这里比没有树的马路凉快不少。",
+            "en": "Look up: the branches from both sides meet over the road. In summer it is noticeably cooler here than on a street without trees.",
+            "ja": "見上げてみよう。両側の枝が道の上でつながっています。夏は、木のない道よりずっと涼しく感じます。"
+          },
+          "coordinate": {
+            "lat": 31.2122,
+            "lon": 121.4372
+          }
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "os-umeda",
+      "cityId": "osaka",
+      "lens": "planning",
+      "title": {
+        "zh": "梅田以前真的是一片田吗？",
+        "en": "Was Umeda really once a field?",
+        "ja": "梅田は、ほんとうに田んぼだったの？"
+      },
+      "area": {
+        "zh": "北区 · 梅田",
+        "en": "Kita · Umeda",
+        "ja": "北区・梅田"
+      },
+      "distanceKm": 1.3,
+      "minutes": 60,
+      "oneLiner": {
+        "young": {
+          "zh": "很久以前这里是湿湿的低地，人们填上土才变成能走路的地方。",
+          "en": "Long ago this was wet, low ground. People filled it with earth to make land you could walk on.",
+          "ja": "むかし、ここはじめじめした低い土地でした。土をうめて、歩ける場所にしました。"
+        },
+        "middle": {
+          "zh": "据说“梅田”原来写作“埋田”，意思是填出来的田。1874 年火车站建在这片城外的空地上，后来车站周围越来越热闹。",
+          "en": "'Umeda' is said to have first been written with characters meaning 'filled-in field'. In 1874 the railway station was built on this open land outside the city, and the area around it grew ever busier.",
+          "ja": "「梅田」は、もとは「埋田」と書いたといわれます。1874年、町はずれのこの空き地に駅がつくられ、まわりがだんだんにぎやかになりました。"
+        },
+        "older": {
+          "zh": "火车站最初建在城外，因为那里地便宜、空地多。车站带来了人流，商店、办公楼跟着聚过来，城外反而成了新的中心。车站北边的货运站搬走后，又改成了公园和新街区。",
+          "en": "The station was first built outside the city, where land was cheap and plentiful. It brought crowds, shops and offices followed, and the outskirts became a new centre. When the freight yard north of the station moved away, it was turned into a park and a new district.",
+          "ja": "駅は土地が安く広い町はずれにつくられました。駅が人を集め、店やオフィスが続き、町はずれが新しい中心になりました。駅の北の貨物駅が移ったあとは、公園と新しい街になりました。"
+        }
+      },
+      "question": {
+        "young": {
+          "zh": "你数一数，这里有几种不同的车？",
+          "en": "How many kinds of vehicles can you count here?",
+          "ja": "ここには何種類の乗り物がある？"
+        },
+        "middle": {
+          "zh": "为什么火车站一开始要建在城外？",
+          "en": "Why was the station first built outside the city?",
+          "ja": "駅はなぜ、はじめ町の外につくられたのだろう？"
+        },
+        "older": {
+          "zh": "货运站搬走后那块地，为什么做成公园而不全盖楼？",
+          "en": "After the freight yard moved, why make a park instead of filling the land with buildings?",
+          "ja": "貨物駅のあと地を、なぜ全部ビルにせず公園にしたのだろう？"
+        }
+      },
+      "stops": [
+        {
+          "id": "os-osaka-station",
+          "name": {
+            "zh": "大阪站",
+            "en": "Osaka Station",
+            "ja": "大阪駅"
+          },
+          "story": {
+            "zh": "西日本最大的车站之一。1874 年刚开通时，周围还是田地。",
+            "en": "One of the biggest stations in western Japan. When it opened in 1874, fields still surrounded it.",
+            "ja": "西日本で最大級の駅です。1874年に開業したころ、まわりはまだ田畑でした。"
+          },
+          "coordinate": {
+            "lat": 34.7025,
+            "lon": 135.4959
+          }
+        },
+        {
+          "id": "os-umekita",
+          "name": {
+            "zh": "梅北公园",
+            "en": "Umekita Park",
+            "ja": "うめきた公園"
+          },
+          "story": {
+            "zh": "这里以前是停货运列车的地方。货运站搬走后，城市在车站门口留出了一大片草地。",
+            "en": "Freight trains used to be parked here. After the yard moved, the city kept a large lawn right outside the station.",
+            "ja": "ここはむかし貨物列車がとまる場所でした。貨物駅が移ったあと、駅のすぐ前に大きな芝生が残されました。"
+          },
+          "coordinate": {
+            "lat": 34.7045,
+            "lon": 135.4942
+          }
+        },
+        {
+          "id": "os-sky-building",
+          "name": {
+            "zh": "梅田蓝天大厦",
+            "en": "Umeda Sky Building",
+            "ja": "梅田スカイビル"
+          },
+          "story": {
+            "zh": "两栋楼在顶上连在一起，1993 年建成。从上面能看到淀川和整个大阪平原。",
+            "en": "Two towers joined at the top, completed in 1993. From above you can see the Yodo River and the whole Osaka plain.",
+            "ja": "二つのビルが上でつながっています。1993年に完成しました。上からは淀川と大阪平野が見わたせます。"
+          },
+          "coordinate": {
+            "lat": 34.7053,
+            "lon": 135.4897
+          }
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "os-shinsekai",
+      "cityId": "osaka",
+      "lens": "culture",
+      "title": {
+        "zh": "通天阁下面为什么这么热闹？",
+        "en": "Why is it so lively under Tsutenkaku?",
+        "ja": "通天閣の下は、なぜこんなににぎやかなの？"
+      },
+      "area": {
+        "zh": "浪速区 · 新世界",
+        "en": "Naniwa · Shinsekai",
+        "ja": "浪速区・新世界"
+      },
+      "distanceKm": 0.9,
+      "minutes": 60,
+      "oneLiner": {
+        "young": {
+          "zh": "一百多年前，人们在这里造了一座高塔和一个游乐园，大家都跑来玩。",
+          "en": "Over a hundred years ago people built a tall tower and an amusement park here, and everyone came to play.",
+          "ja": "100年以上前、ここに高い塔と遊園地がつくられ、みんなが遊びに来ました。"
+        },
+        "middle": {
+          "zh": "1903 年这里办过一场大博览会。会后空出来的地建成了叫“新世界”的游乐街区，1912 年立起了第一代通天阁。现在的塔是 1956 年重建的第二代。",
+          "en": "A great exposition was held here in 1903. Afterwards the land became an entertainment district called Shinsekai, 'New World', and the first Tsutenkaku rose in 1912. Today's tower is the second, rebuilt in 1956.",
+          "ja": "1903年、ここで大きな博覧会が開かれました。そのあと地が「新世界」という娯楽の街になり、1912年に初代の通天閣が建ちました。いまの塔は1956年に建てなおした二代目です。"
+        },
+        "older": {
+          "zh": "“新世界”这个名字表达了当时人们对新式城市生活的向往。街区后来几起几落，靠便宜的小吃和怀旧的气氛重新吸引了人。一个街区的热闹，是一代一代人不断重新经营出来的。",
+          "en": "The name 'New World' expressed people's longing for modern city life. The district rose and fell several times, then drew people back with cheap food and nostalgia. A lively neighbourhood is something each generation has to rebuild.",
+          "ja": "「新世界」という名前には、新しい都会のくらしへのあこがれがこめられています。街は何度もさかえたりさびれたりし、安い食べ物となつかしい雰囲気で人をよびもどしました。街のにぎわいは、世代ごとに作りなおされるものです。"
+        }
+      },
+      "question": {
+        "young": {
+          "zh": "你看到几个大大的招牌？最好玩的是哪个？",
+          "en": "How many giant signs can you see? Which is the funniest?",
+          "ja": "大きな看板はいくつ見える？いちばんおもしろいのはどれ？"
+        },
+        "middle": {
+          "zh": "塔为什么要重建？第一座去哪儿了？",
+          "en": "Why was the tower rebuilt? What happened to the first one?",
+          "ja": "塔はなぜ建てなおされた？初代はどうなったのだろう？"
+        },
+        "older": {
+          "zh": "一条老街怎样才能一直有人来？",
+          "en": "What keeps people coming to an old street?",
+          "ja": "古い商店街に人が来つづけるには、何が必要？"
+        }
+      },
+      "stops": [
+        {
+          "id": "os-tsutenkaku",
+          "name": {
+            "zh": "通天阁",
+            "en": "Tsutenkaku",
+            "ja": "通天閣"
+          },
+          "story": {
+            "zh": "名字的意思是“通到天上的楼阁”。第一代在战争期间被拆掉，现在这座是 1956 年在当地人的支持下重建的。",
+            "en": "The name means 'tower reaching heaven'. The first was dismantled during the war; this one was rebuilt in 1956 with local support.",
+            "ja": "名前は「天に通じる高い建物」という意味です。初代は戦争中に解体され、いまの塔は1956年に地元の力で建てなおされました。"
+          },
+          "coordinate": {
+            "lat": 34.6525,
+            "lon": 135.5063
+          }
+        },
+        {
+          "id": "os-janjan",
+          "name": {
+            "zh": "锵锵横丁",
+            "en": "Janjan Yokocho",
+            "ja": "ジャンジャン横丁"
+          },
+          "story": {
+            "zh": "窄窄的拱廊街，两边是炸串店和下将棋的小店。名字来自以前店里招揽客人的三味线声。",
+            "en": "A narrow arcade lined with kushikatsu shops and shogi parlours. Its name comes from the twang of shamisen once played to draw customers.",
+            "ja": "せまいアーケードに、串カツの店や将棋の店が並びます。名前は、むかし客を呼ぶためにひいた三味線の音からきています。"
+          },
+          "coordinate": {
+            "lat": 34.6497,
+            "lon": 135.5053
+          }
+        },
+        {
+          "id": "os-tennoji-park",
+          "name": {
+            "zh": "天王寺公园",
+            "en": "Tennoji Park",
+            "ja": "天王寺公園"
+          },
+          "story": {
+            "zh": "1903 年博览会的会场就在这一带。会后一部分建成了公园，另一部分成了新世界。",
+            "en": "The 1903 exposition was held around here. Afterwards part became this park and part became Shinsekai.",
+            "ja": "1903年の博覧会の会場はこのあたりでした。そのあと一部は公園に、一部は新世界になりました。"
+          },
+          "coordinate": {
+            "lat": 34.6508,
+            "lon": 135.5105
+          }
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "os-public-gifts",
+      "cityId": "osaka",
+      "lens": "civic",
+      "title": {
+        "zh": "这些漂亮的老房子是谁出钱盖的？",
+        "en": "Who paid for these grand old buildings?",
+        "ja": "このりっぱな古い建物は、だれがお金を出したの？"
+      },
+      "area": {
+        "zh": "北区 · 中之岛",
+        "en": "Kita · Nakanoshima",
+        "ja": "北区・中之島"
+      },
+      "distanceKm": 0.6,
+      "minutes": 60,
+      "oneLiner": {
+        "young": {
+          "zh": "这里的图书馆和大会堂，是很久以前有钱的人送给大家用的礼物。",
+          "en": "The library and the hall here were gifts from wealthy people long ago for everyone to use.",
+          "ja": "ここの図書館と公会堂は、むかしお金持ちがみんなのためにおくったプレゼントです。"
+        },
+        "middle": {
+          "zh": "图书馆是住友家捐建的，1904 年开馆；中央公会堂是一位叫岩本荣之助的商人捐钱盖的，1918 年建成。旁边就是管理城市的大阪市役所。",
+          "en": "The library was donated by the Sumitomo family and opened in 1904. The Central Public Hall was funded by a businessman named Iwamoto Einosuke and completed in 1918. Next door is Osaka City Hall, which runs the city.",
+          "ja": "図書館は住友家の寄付で建てられ、1904年に開館しました。中央公会堂は岩本栄之助という実業家の寄付で、1918年に完成しました。となりは街を動かす大阪市役所です。"
+        },
+        "older": {
+          "zh": "公共建筑不一定都是政府出钱。大阪商人有把赚来的钱回馈城市的传统，图书馆和公会堂就是例子。谁出钱、给谁用、谁来管，是看懂一座公共建筑的三个问题。",
+          "en": "Public buildings are not always paid for by government. Osaka merchants had a tradition of giving back to the city, and the library and hall are examples. Who paid, who uses it and who runs it are three questions that explain any public building.",
+          "ja": "公共の建物は、いつも役所がお金を出すとはかぎりません。大阪の商人には、もうけを街にかえす伝統があり、図書館と公会堂はその例です。だれが出し、だれが使い、だれが管理するか。この三つで公共の建物がわかります。"
+        }
+      },
+      "question": {
+        "young": {
+          "zh": "图书馆是谁都可以进去的吗？为什么？",
+          "en": "Can anyone go into a library? Why?",
+          "ja": "図書館はだれでも入れる？どうして？"
+        },
+        "middle": {
+          "zh": "如果你有很多钱，想送给城市一样东西，你会送什么？",
+          "en": "If you were rich and could give the city one thing, what would it be?",
+          "ja": "お金がたくさんあって、街に一つおくるなら、何をおくる？"
+        },
+        "older": {
+          "zh": "私人捐建的公共建筑，应该听捐的人的，还是听大家的？",
+          "en": "Should a donated public building follow the donor's wishes or the public's?",
+          "ja": "寄付でできた公共の建物は、寄付した人と市民、どちらの考えにしたがうべき？"
+        }
+      },
+      "stops": [
+        {
+          "id": "os-city-hall",
+          "name": {
+            "zh": "大阪市役所",
+            "en": "Osaka City Hall",
+            "ja": "大阪市役所"
+          },
+          "story": {
+            "zh": "市长和市议会在这里工作。垃圾怎么收、公园怎么修、学校怎么办，都在这里商量决定。",
+            "en": "The mayor and city council work here. How rubbish is collected, parks are built and schools are run is discussed and decided here.",
+            "ja": "市長と市議会がここで働いています。ごみの集め方、公園の整備、学校のことなどを、ここで話しあって決めます。"
+          },
+          "coordinate": {
+            "lat": 34.6938,
+            "lon": 135.5019
+          }
+        },
+        {
+          "id": "os-library",
+          "name": {
+            "zh": "大阪府立中之岛图书馆",
+            "en": "Nakanoshima Library",
+            "ja": "大阪府立中之島図書館"
+          },
+          "story": {
+            "zh": "门口有像希腊神殿一样的柱子。它开了一百二十多年，现在还在借书给大家。",
+            "en": "Columns like a Greek temple stand at the entrance. It has been open for more than 120 years and still lends books.",
+            "ja": "入口にはギリシャの神殿のような柱があります。120年以上つづいていて、いまも本を貸しています。"
+          },
+          "coordinate": {
+            "lat": 34.6934,
+            "lon": 135.5029
+          }
+        },
+        {
+          "id": "os-public-hall",
+          "name": {
+            "zh": "大阪市中央公会堂",
+            "en": "Osaka City Central Public Hall",
+            "ja": "大阪市中央公会堂"
+          },
+          "story": {
+            "zh": "红砖配白色石头的大会堂。一百多年来，演讲、音乐会和市民集会都在这里办。",
+            "en": "A great hall of red brick and white stone. For over a century it has hosted lectures, concerts and public meetings.",
+            "ja": "赤レンガと白い石の大きなホールです。100年以上、講演会やコンサート、市民の集まりが開かれてきました。"
+          },
+          "coordinate": {
+            "lat": 34.6935,
+            "lon": 135.504
+          }
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "os-water-city",
+      "cityId": "osaka",
+      "lens": "nature",
+      "title": {
+        "zh": "大阪为什么叫“水都”？",
+        "en": "Why is Osaka called the 'city of water'?",
+        "ja": "大阪はなぜ「水の都」と呼ばれるの？"
+      },
+      "area": {
+        "zh": "中央区 · 天满桥",
+        "en": "Chuo · Tenmabashi",
+        "ja": "中央区・天満橋"
+      },
+      "distanceKm": 1.5,
+      "minutes": 90,
+      "oneLiner": {
+        "young": {
+          "zh": "大阪有很多很多河和桥，以前人们坐船比走路还方便。",
+          "en": "Osaka has lots and lots of rivers and bridges. Travelling by boat used to be easier than walking.",
+          "ja": "大阪には川と橋がとてもたくさんあります。むかしは歩くより船のほうが便利でした。"
+        },
+        "middle": {
+          "zh": "淀川从京都那边流过来，在大阪分成许多条河再流进大海。江户时代人们还挖了很多运河，桥多到被叫作“八百八桥”。",
+          "en": "The Yodo River flows down from the Kyoto side and splits into many channels in Osaka before reaching the sea. In the Edo period people dug many canals too, and there were so many bridges the city was nicknamed 'eight hundred and eight bridges'.",
+          "ja": "淀川は京都のほうから流れてきて、大阪でいくつもの川に分かれて海に入ります。江戸時代には運河もたくさん掘られ、橋が多いので「八百八橋」と呼ばれました。"
+        },
+        "older": {
+          "zh": "大阪建在河流冲出来的平地上，地势低、水路密。水带来了运输的方便，也带来洪水的危险，所以城市一边利用河，一边修堤坝、改河道。很多运河后来被填掉修成了马路。",
+          "en": "Osaka sits on low flatland laid down by rivers, laced with waterways. Water made transport easy but brought floods, so the city both used its rivers and built embankments and rerouted channels. Many canals were later filled in to make roads.",
+          "ja": "大阪は川が運んだ土でできた低い平地にあり、水路がたくさんあります。水は運ぶのに便利ですが、洪水の危険もあります。街は川を使いながら、堤防をつくり、流れを変えてきました。多くの運河はのちにうめられて道路になりました。"
+        }
+      },
+      "question": {
+        "young": {
+          "zh": "河水往哪边流？找一片漂着的叶子看看。",
+          "en": "Which way does the river flow? Find a floating leaf and watch.",
+          "ja": "川はどっちに流れている？うかんだ葉っぱを見てみよう。"
+        },
+        "middle": {
+          "zh": "桥的名字里藏着什么？找一座桥读读它的名字。",
+          "en": "What is hidden in a bridge's name? Find one and read it.",
+          "ja": "橋の名前には何がかくれている？一つ見つけて読んでみよう。"
+        },
+        "older": {
+          "zh": "把运河填掉修马路，得到了什么，失去了什么？",
+          "en": "What was gained and lost when canals were filled in for roads?",
+          "ja": "運河をうめて道路にして、何を得て、何を失っただろう？"
+        }
+      },
+      "stops": [
+        {
+          "id": "os-tenmabashi",
+          "name": {
+            "zh": "天满桥",
+            "en": "Tenmabashi Bridge",
+            "ja": "天満橋"
+          },
+          "story": {
+            "zh": "江户时代大阪最重要的三座桥之一，由幕府管理。站在桥上看大川有多宽。",
+            "en": "One of Osaka's three great bridges in the Edo period, maintained by the shogunate. From the bridge, see how wide the Okawa river is.",
+            "ja": "江戸時代の「浪華三大橋」の一つで、幕府が管理しました。橋の上から大川の広さを見てみよう。"
+          },
+          "coordinate": {
+            "lat": 34.6906,
+            "lon": 135.5172
+          }
+        },
+        {
+          "id": "os-hachikenya",
+          "name": {
+            "zh": "八轩家浜",
+            "en": "Hachikenya-hama",
+            "ja": "八軒家浜"
+          },
+          "story": {
+            "zh": "这里以前是码头。从京都来的客船顺着淀川漂一晚上，在这里靠岸。",
+            "en": "This was once a landing. Passenger boats from Kyoto drifted down the Yodo River overnight and docked here.",
+            "ja": "ここはむかし船着場でした。京都からの客船が淀川を一晩かけて下り、ここに着きました。"
+          },
+          "coordinate": {
+            "lat": 34.6902,
+            "lon": 135.515
+          }
+        },
+        {
+          "id": "os-sakuranomiya",
+          "name": {
+            "zh": "毛马樱之宫公园",
+            "en": "Kema Sakuranomiya Park",
+            "ja": "毛馬桜之宮公園"
+          },
+          "story": {
+            "zh": "沿着大川的长长的河岸公园，种了几千棵樱花树。河岸留给人走路，也给河水涨起来时留出地方。",
+            "en": "A long riverside park along the Okawa with thousands of cherry trees. The bank gives people a place to walk and the river room to rise.",
+            "ja": "大川にそった長い公園で、数千本の桜があります。川べりは人が歩く場所であり、水がふえたときのゆとりでもあります。"
+          },
+          "coordinate": {
+            "lat": 34.6975,
+            "lon": 135.5205
+          }
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "os-castle",
+      "cityId": "osaka",
+      "lens": "history",
+      "title": {
+        "zh": "大阪城的石头墙为什么这么高？",
+        "en": "Why are Osaka Castle's stone walls so high?",
+        "ja": "大阪城の石垣は、なぜこんなに高いの？"
+      },
+      "area": {
+        "zh": "中央区 · 大阪城",
+        "en": "Chuo · Osaka Castle",
+        "ja": "中央区・大阪城"
+      },
+      "distanceKm": 1.6,
+      "minutes": 90,
+      "oneLiner": {
+        "young": {
+          "zh": "城堡外面有深深的水沟和高高的石头墙，是为了不让敌人进来。",
+          "en": "The castle has deep moats and high stone walls to keep enemies out.",
+          "ja": "お城には深いほりと高い石垣があります。敵を入れないためです。"
+        },
+        "middle": {
+          "zh": "1583 年丰臣秀吉开始在这里造城。后来城被烧毁，德川幕府重新修建，现在看到的石墙大多是那时候的。天守阁是 1931 年靠市民捐款重建的。",
+          "en": "Toyotomi Hideyoshi began building a castle here in 1583. It later burned, and the Tokugawa shogunate rebuilt it; most walls you see date from then. The main tower was rebuilt in 1931 with citizens' donations.",
+          "ja": "1583年、豊臣秀吉がここに城をつくりはじめました。のちに焼け、徳川幕府が建てなおしました。いま見える石垣の多くはそのときのものです。天守閣は1931年、市民の寄付で再建されました。"
+        },
+        "older": {
+          "zh": "大阪城建在台地的北端，三面是河和低地，易守难攻，又能控制通往京都的水路。巨大的石头从濑户内海的岛上用船运来，各地大名被分派负责一段，石头上还留着他们的记号。",
+          "en": "The castle stands at the northern tip of a plateau with rivers and lowland on three sides: easy to defend and placed to control the waterway to Kyoto. Giant stones were shipped from islands in the Seto Inland Sea; lords from across Japan were each assigned a section, and their marks remain on the stones.",
+          "ja": "大阪城は台地の北のはしにあり、三方が川と低地で守りやすく、京都への水路もおさえられます。巨大な石は瀬戸内海の島から船で運ばれました。各地の大名が区間をうけもち、石にはその印が残っています。"
+        }
+      },
+      "question": {
+        "young": {
+          "zh": "最大的那块石头，有几个你那么高？",
+          "en": "How many of you tall is the biggest stone?",
+          "ja": "いちばん大きな石は、きみ何人ぶんの高さ？"
+        },
+        "middle": {
+          "zh": "没有吊车的时代，人们怎么搬这么大的石头？",
+          "en": "Without cranes, how did people move such huge stones?",
+          "ja": "クレーンのない時代、どうやって大きな石を運んだのだろう？"
+        },
+        "older": {
+          "zh": "为什么要把城建在这个位置？看看地图上的河。",
+          "en": "Why build the castle at this spot? Look at the rivers on the map.",
+          "ja": "なぜこの場所に城をつくったのだろう？地図で川を見てみよう。"
+        }
+      },
+      "stops": [
+        {
+          "id": "os-otemon",
+          "name": {
+            "zh": "大手门",
+            "en": "Otemon Gate",
+            "ja": "大手門"
+          },
+          "story": {
+            "zh": "这是城的正门。进门后路马上拐弯，是为了让冲进来的敌人慢下来。",
+            "en": "This is the main gate. The path turns sharply just inside, to slow attackers down.",
+            "ja": "城の正門です。入るとすぐ道が曲がります。攻めてきた敵をおそくするためです。"
+          },
+          "coordinate": {
+            "lat": 34.6859,
+            "lon": 135.5213
+          }
+        },
+        {
+          "id": "os-takoishi",
+          "name": {
+            "zh": "樱门和蛸石",
+            "en": "Sakuramon Gate and the Octopus Stone",
+            "ja": "桜門と蛸石"
+          },
+          "story": {
+            "zh": "门里这块石头是城里最大的，表面有约 36 张榻榻米那么大，叫“蛸石”。",
+            "en": "The stone inside this gate is the largest in the castle, its face about the size of 36 tatami mats. It is called the Octopus Stone.",
+            "ja": "門の中のこの石は城でいちばん大きく、表面はたたみ約36枚ぶんです。「蛸石」と呼ばれます。"
+          },
+          "coordinate": {
+            "lat": 34.6858,
+            "lon": 135.5255
+          }
+        },
+        {
+          "id": "os-tenshu",
+          "name": {
+            "zh": "天守阁",
+            "en": "Main Tower",
+            "ja": "天守閣"
+          },
+          "story": {
+            "zh": "这座天守阁是 1931 年用钢筋混凝土重建的，里面是博物馆，有电梯。它已经比以前任何一代天守都站得久。",
+            "en": "This tower was rebuilt in 1931 in reinforced concrete and houses a museum with a lift. It has already stood longer than any earlier tower here.",
+            "ja": "この天守閣は1931年に鉄筋コンクリートで再建され、中は博物館でエレベーターがあります。これまでのどの天守よりも長く建っています。"
+          },
+          "coordinate": {
+            "lat": 34.6873,
+            "lon": 135.5259
+          }
         }
       ],
       "verified": false
