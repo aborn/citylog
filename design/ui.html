@@ -1,0 +1,369 @@
+<title>城迹 CityLog 设计稿</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&display=swap">
+<style>
+/* 布局：一张设计看板。品牌区在上，核心循环居中，七块手机屏按使用顺序横向换行排列。 */
+:root{
+  --bg:#F3F6F1; --surface:#FFFFFF; --fg:#16302C; --muted:#5F726D; --line:#D9E3DC;
+  --brand:#0F4C45; --road:#FFC531; --pin:#FF6B4A; --on-brand:#FBFAF3;
+  /* 手机屏内的 App 配色固定，不随页面主题变化 */
+  --a-bg:#F4F7F2; --a-card:#FFFFFF; --a-fg:#16302C; --a-muted:#667A74; --a-line:#DFE8E1;
+  --a-brand:#0F4C45; --a-road:#FFC531; --a-pin:#FF6B4A; --a-water:#BCDCE6; --a-park:#CDE5C2; --a-land:#E8EEE6; --a-street:#FFFFFF;
+  --display:"Bricolage Grotesque","Avenir Next","PingFang SC",sans-serif;
+  --body:"PingFang SC","Noto Sans SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#0B1F1C; --surface:#12302B; --fg:#E7F0EB; --muted:#9DB3AC; --line:#234A43; --brand:#2B8274; color-scheme:dark } }
+:root[data-theme="dark"]{ --bg:#0B1F1C; --surface:#12302B; --fg:#E7F0EB; --muted:#9DB3AC; --line:#234A43; --brand:#2B8274; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 72px}
+.wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:64px}
+h1,h2,h3,p{margin:0}
+h2{font-size:22px;font-weight:700;text-wrap:balance}
+.lead{color:var(--muted);max-width:40em}
+.sec{display:flex;flex-direction:column;gap:20px}
+.eyebrow{font-family:var(--display);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* 品牌区 */
+.hero{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.hero svg{width:132px;height:132px;display:block}
+.hero h1{font-size:clamp(40px,7vw,64px);line-height:1.05;font-weight:700;letter-spacing:.04em}
+.hero .en{font-family:var(--display);font-weight:700;letter-spacing:.2em;font-size:15px;color:var(--muted);margin-top:6px}
+.slogan{font-size:clamp(20px,3vw,26px);font-weight:600;margin-top:14px}
+.slogan span{background:linear-gradient(transparent 62%,var(--road) 62%);color:var(--fg)}
+:root[data-theme="dark"] .slogan span{background:linear-gradient(transparent 62%,#8a6a10 62%)}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .slogan span{background:linear-gradient(transparent 62%,#8a6a10 62%)} }
+@media (max-width:520px){ .hero{grid-template-columns:1fr} .hero svg{width:96px;height:96px} }
+
+.brandgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.tile{border:1px solid var(--line);border-radius:14px;padding:20px;background:var(--surface);display:flex;flex-direction:column;gap:12px;min-width:0}
+.tile h3{font-size:14px;font-weight:700}
+.tile p,.tile li{font-size:13.5px;color:var(--muted)}
+.tile ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:4px}
+.marks{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.marks svg{width:64px;height:64px}
+.sw{display:flex;gap:8px;flex-wrap:wrap}
+.sw i{flex:1 1 60px;height:52px;border-radius:8px;display:flex;align-items:flex-end;padding:6px;font:500 10px/1 var(--display);font-style:normal;letter-spacing:.04em}
+.alt{display:flex;flex-direction:column;gap:6px}
+.alt b{font-size:15px;color:var(--fg);font-weight:600}
+
+/* 核心循环：确实是一个有先后的流程，所以编号 */
+.loop{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+.loop div{padding:18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 -1px -1px 0;display:flex;flex-direction:column;gap:4px}
+.loop b{font-size:15px}
+.loop span{font-size:13px;color:var(--muted)}
+.loop em{font:700 12px var(--display);font-style:normal;color:var(--pin);letter-spacing:.1em}
+
+/* 手机屏 */
+.screens{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:40px 28px;justify-items:center}
+.shot{display:flex;flex-direction:column;gap:12px;width:290px;max-width:100%}
+.shot figcaption b{display:block;font-size:14px}
+.shot figcaption{font-size:13px;color:var(--muted)}
+figure{margin:0}
+.phone{width:290px;max-width:100%;height:612px;border:7px solid #0A1614;border-radius:40px;background:var(--a-bg);color:var(--a-fg);overflow:hidden;position:relative;display:flex;flex-direction:column;font-size:12.5px;line-height:1.5;box-shadow:0 18px 40px -22px rgba(8,30,26,.55)}
+.phone *{min-width:0}
+.sb{display:flex;justify-content:space-between;padding:10px 22px 4px;font:700 11px var(--display);flex:none}
+.sb i{font-style:normal;letter-spacing:.08em}
+.body{flex:1;display:flex;flex-direction:column;gap:10px;padding:6px 14px 10px;overflow:hidden}
+.tabs{flex:none;display:grid;grid-template-columns:repeat(4,1fr);background:var(--a-card);border-top:1px solid var(--a-line);padding:8px 6px 14px;text-align:center;font-size:10.5px;color:var(--a-muted)}
+.tabs span{display:flex;flex-direction:column;align-items:center;gap:3px}
+.tabs span::before{content:"";width:18px;height:18px;border-radius:6px;border:2px solid currentColor}
+.tabs .on{color:var(--a-brand);font-weight:700}
+.tabs .on::before{background:var(--a-road);border-color:var(--a-brand)}
+.h{font-size:19px;font-weight:700;line-height:1.3}
+.sub{color:var(--a-muted);font-size:11.5px}
+.card{background:var(--a-card);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.row{display:flex;align-items:center;gap:8px;justify-content:space-between}
+.chips{display:flex;gap:6px;flex-wrap:nowrap;overflow:hidden}
+.chip{flex:none;padding:3px 10px;border-radius:99px;background:var(--a-card);border:1px solid var(--a-line);font-size:11px;color:var(--a-muted)}
+.chip.on{background:var(--a-brand);border-color:var(--a-brand);color:#FBFAF3}
+.lens{display:inline-block;padding:1px 8px;border-radius:5px;font-size:10.5px;font-weight:700;background:var(--a-road);color:#3A2A00}
+.lens.h2{background:#F6D5CB;color:#7A2A14}.lens.p{background:#CFE0F5;color:#173A66}
+.btn{display:block;text-align:center;background:var(--a-brand);color:#FBFAF3;border-radius:12px;padding:10px;font-weight:700;font-size:13px}
+.btn.ghost{background:transparent;color:var(--a-brand);border:1.5px solid var(--a-brand)}
+.map{border-radius:18px;overflow:hidden;position:relative;flex:none}
+.map svg{display:block;width:100%;height:auto}
+.float{position:absolute;background:var(--a-card);border-radius:12px;padding:6px 10px;font-size:11px;box-shadow:0 4px 12px -6px rgba(8,30,26,.4)}
+.big{font:700 22px/1 var(--display);font-variant-numeric:tabular-nums}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center}
+.stat div{background:var(--a-card);border-radius:12px;padding:8px 4px}
+.stat small{display:block;color:var(--a-muted);font-size:10.5px;margin-top:3px}
+.stop{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:start}
+.stop i{width:22px;height:22px;border-radius:50%;background:var(--a-brand);color:#FBFAF3;font:700 11px/22px var(--display);text-align:center;font-style:normal}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);background:var(--a-line);border-radius:10px;padding:3px;font-size:11px;text-align:center}
+.seg span{padding:4px;border-radius:8px;color:var(--a-muted)}
+.seg .on{background:var(--a-card);color:var(--a-fg);font-weight:700}
+.q{background:#FFF4CF;border-radius:12px;padding:10px;font-size:12px}
+.wave{display:flex;align-items:center;gap:2px;height:22px;flex:1}
+.wave i{flex:1;background:var(--a-brand);border-radius:2px;opacity:.85}
+.play{flex:none;width:34px;height:34px;border-radius:50%;background:var(--a-brand);position:relative}
+.play::after{content:"";position:absolute;left:13px;top:10px;border:7px solid transparent;border-left:11px solid #FBFAF3;border-right:0}
+.acts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.act{border-radius:16px;padding:12px;font-weight:700;font-size:13px;display:flex;flex-direction:column;gap:2px}
+.act small{font-weight:400;font-size:10.5px;opacity:.8}
+.act.cam{background:var(--a-road);color:#3A2A00}.act.mic{background:var(--a-pin);color:#fff}
+.bubble{background:var(--a-card);border-radius:4px 16px 16px 16px;padding:11px;font-size:12.5px}
+.src{font-size:10.5px;color:var(--a-muted);border-top:1px dashed var(--a-line);padding-top:6px;margin-top:4px}
+.quote{background:var(--a-brand);color:#FBFAF3;border-radius:16px;padding:12px;font-size:13.5px;font-weight:600;line-height:1.55}
+.quote small{display:block;font-weight:400;opacity:.75;margin-top:4px;font-size:11px}
+.pics{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.pics i{aspect-ratio:1;border-radius:10px;background:linear-gradient(160deg,var(--a-water),var(--a-park))}
+.pics i:nth-child(2){background:linear-gradient(200deg,#E9C9A8,#C98F6B)}.pics i:nth-child(3){background:linear-gradient(140deg,#D9DEE8,#9FAEC2)}
+.bar{display:grid;grid-template-columns:44px 1fr 34px;gap:8px;align-items:center;font-size:11.5px}
+.bar u{height:8px;border-radius:9px;background:var(--a-line);display:block;position:relative;text-decoration:none}
+.bar u b{position:absolute;inset:0 auto 0 0;border-radius:9px;background:var(--a-road)}
+.bar span:last-child{text-align:right;font-variant-numeric:tabular-nums;color:var(--a-muted)}
+.lenses{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center;font-size:11px}
+.lenses div{border:1px solid var(--a-line);border-radius:10px;padding:6px 2px;background:var(--a-card)}
+.lenses b{display:block;font:700 15px var(--display)}
+.vip{background:linear-gradient(120deg,#0F4C45,#1B6F63);color:#FBFAF3;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:4px}
+.vip .price{font:700 20px var(--display)}
+.note{font-size:12.5px;color:var(--muted)}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 512 512">
+    <polygon points="96,156 203,126 203,356 96,386" fill="#FBFAF3"/><polygon points="203,126 309,156 309,386 203,356" fill="#FFC531"/><polygon points="309,156 416,126 416,356 309,386" fill="#FBFAF3"/>
+    <polygon points="203,126 215,129.4 215,359.4 203,356" fill="#0B3B36" fill-opacity=".16"/><polygon points="309,156 321,152.6 321,382.6 309,386" fill="#0B3B36" fill-opacity=".10"/>
+    <path d="M134 326 C 176 312, 168 246, 214 244 S 268 318, 312 276 S 340 196, 376 186" fill="none" stroke="#0F4C45" stroke-width="15" stroke-linecap="round" stroke-dasharray="1 30"/>
+    <circle cx="134" cy="326" r="15" fill="#0F4C45"/><circle cx="378" cy="184" r="27" fill="#FF6B4A"/><circle cx="378" cy="184" r="10" fill="#FBFAF3"/>
+  </symbol>
+  <!-- 示意地图：非真实地理数据 -->
+  <symbol id="citymap" viewBox="0 0 262 250">
+    <rect width="262" height="250" fill="#E8EEE6"/>
+    <path d="M-10 60 C 60 40, 90 120, 150 110 S 230 170, 280 150" fill="none" stroke="#BCDCE6" stroke-width="22"/>
+    <rect x="18" y="150" width="58" height="46" rx="10" fill="#CDE5C2"/><rect x="186" y="22" width="52" height="40" rx="10" fill="#CDE5C2"/>
+    <g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round">
+      <path d="M0 24 H262M0 96 H262M0 138 H262M0 206 H262M30 0 V250M96 0 V250M150 0 V250M214 0 V250M0 236 L120 150 L262 70"/>
+    </g>
+    <g fill="none" stroke="#FFC531" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M96 206 V138 H150 V96 H214"/><path d="M30 138 H96"/><path d="M150 138 V206 H214"/><path d="M96 96 V24 H150"/>
+    </g>
+  </symbol>
+</svg>
+
+<div class="wrap">
+
+<header class="hero">
+  <svg viewBox="0 0 512 512" role="img" aria-label="城迹 logo"><rect width="512" height="512" rx="116" fill="#0F4C45"/><use href="#mark"/></svg>
+  <div>
+    <h1>城迹</h1>
+    <div class="en">CITYLOG</div>
+    <p class="slogan"><span>世面，就在家门口。</span></p>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="eyebrow">Brand</div>
+  <h2>名字、slogan 和 logo</h2>
+  <div class="brandgrid">
+    <div class="tile">
+      <h3>Logo</h3>
+      <div class="marks">
+        <svg viewBox="0 0 512 512"><rect width="512" height="512" rx="116" fill="#0F4C45"/><use href="#mark"/></svg>
+        <svg viewBox="0 0 512 512"><rect width="512" height="512" rx="116" fill="#FFC531"/><use href="#mark"/></svg>
+        <svg viewBox="0 0 512 512"><rect x="4" y="4" width="504" height="504" rx="112" fill="#EDF2EC" stroke="#0F4C45" stroke-width="8"/><use href="#mark"/></svg>
+      </div>
+      <p>一张三折的纸质城市地图，对应视频里“买一张详细地图”。虚线是一家人走出来的路，橙色落点是今天停下来细看的地方。中间那一折是已经涂亮的区域。</p>
+    </div>
+    <div class="tile">
+      <h3>Slogan</h3>
+      <div class="alt">
+        <b>世面，就在家门口。</b>
+        <p>主 slogan。一句话把“见世面”和“不用走远”接上，家长一眼明白产品卖什么。</p>
+      </div>
+      <ul>
+        <li>备选：把一座城，走遍、走深、走透。</li>
+        <li>备选：不比走多远，只比看多深。</li>
+        <li>英文：See deeper, not farther.</li>
+      </ul>
+    </div>
+    <div class="tile">
+      <h3>名字</h3>
+      <p><b style="color:var(--fg)">城迹</b>：城市的足迹，也是一家人在城市里留下的痕迹。英文沿用 CityLog，log 同时指“日志”和“记录”。</p>
+      <h3>颜色</h3>
+      <div class="sw">
+        <i style="background:#0F4C45;color:#FBFAF3">地图墨绿</i>
+        <i style="background:#FFC531;color:#3A2A00">主干道黄</i>
+        <i style="background:#FF6B4A;color:#fff">落点橙</i>
+        <i style="background:#BCDCE6;color:#16302C">水系蓝</i>
+        <i style="background:#CDE5C2;color:#16302C">绿地</i>
+      </div>
+      <p>颜色全部取自纸质地图的图例：主干道的黄、水系的蓝、绿地的绿。走过的路用“主干道黄”涂亮。</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="eyebrow">Core loop</div>
+  <h2>一个周末的完整循环</h2>
+  <p class="lead">视频里的方法有四步：买地图、定主题、提前查资料、走完用彩笔标出来。App 把最难坚持的两步（查资料、讲得出来）交给 AI，把最有成就感的一步（涂亮地图）做成主界面。</p>
+  <div class="loop">
+    <div><em>01 周四</em><b>收到周末主题</b><span>按住址、孩子年龄和没走过的路生成 3 个</span></div>
+    <div><em>02 出门前</em><b>读 5 分钟备课卡</b><span>一句话讲透、三站、两个问孩子的问题</span></div>
+    <div><em>03 路上</em><b>边走边讲，拍一拍</b><span>到点自动讲；看到什么拍什么，AI 回答</span></div>
+    <div><em>04 路上</em><b>孩子来讲</b><span>孩子用自己的话复述，录下来</span></div>
+    <div><em>05 到家</em><b>地图涂亮，日志生成</b><span>新走的路变黄，这一天自动成一页日志</span></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="eyebrow">Screens</div>
+  <h2>界面稿</h2>
+  <p class="lead">示例城市为杭州，地图为示意图，讲解文字为示例内容，上线前需逐条核对史料。</p>
+
+  <div class="screens">
+
+    <figure class="shot">
+      <div class="phone">
+        <div class="sb"><i>9:41</i><i>5G</i></div>
+        <div class="body">
+          <div class="row"><div><div class="h">我家的杭州</div><div class="sub">拱墅区 · 已走 37 条路</div></div><div style="text-align:right"><div class="big">12%</div><div class="sub">拱墅已涂亮</div></div></div>
+          <div class="map"><svg viewBox="0 0 262 250"><use href="#citymap"/><circle cx="214" cy="96" r="9" fill="#FF6B4A"/><circle cx="214" cy="96" r="3.5" fill="#fff"/></svg>
+            <div class="float" style="left:10px;top:10px">黄色 = 走过的路</div>
+            <div class="float" style="right:10px;bottom:10px;font-weight:700">运河</div>
+          </div>
+          <div class="card">
+            <div class="row"><span class="lens">产业</span><span class="sub">本周末主题 · 周六晴 14°</span></div>
+            <div style="font-size:15px;font-weight:700">运河边为什么有工厂？</div>
+            <div class="sub">拱宸桥西 · 1.8 km · 约 90 分钟 · 新路 4 条</div>
+            <div class="btn">看备课卡</div>
+          </div>
+        </div>
+        <div class="tabs"><span class="on">地图</span><span>主题</span><span>日志</span><span>我家</span></div>
+      </div>
+      <figcaption><b>地图（首页）</b>纸质地图加彩笔的数字版。走过的路自动涂黄，右上角是本区涂亮比例。下方直接给出这个周末去哪。</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <div class="phone">
+        <div class="sb"><i>9:41</i><i>5G</i></div>
+        <div class="body">
+          <div><div class="h">这个周末走哪条路</div><div class="sub">按你家位置、孩子 6 岁、没走过的路生成</div></div>
+          <div class="chips"><span class="chip on">全部</span><span class="chip">历史</span><span class="chip">人文</span><span class="chip">产业</span><span class="chip">规划</span><span class="chip">公共</span></div>
+          <div class="card"><div class="row"><span class="lens">产业</span><span class="sub">离家 2.3 km</span></div><b style="font-size:14px">运河边为什么有工厂？</b><div class="sub">拱宸桥西 · 1.8 km · 90 分钟 · 新路 4 条</div></div>
+          <div class="card"><div class="row"><span class="lens h2">历史</span><span class="sub">地铁 25 分钟</span></div><b style="font-size:14px">皇帝走过的那条街</b><div class="sub">中山中路 · 2.1 km · 2 小时 · 新路 3 条</div></div>
+          <div class="card"><div class="row"><span class="lens p">规划</span><span class="sub">地铁 35 分钟</span></div><b style="font-size:14px">城市为什么搬到江边？</b><div class="sub">钱江新城 · 2.5 km · 2 小时 · 新路 6 条</div></div>
+          <div class="btn ghost">我想去别的地方，帮我出一个主题</div>
+        </div>
+        <div class="tabs"><span>地图</span><span class="on">主题</span><span>日志</span><span>我家</span></div>
+      </div>
+      <figcaption><b>主题</b>每周 3 个小主题，标题是一个孩子会问的问题。六个镜头：历史、人文、产业、规划、公共、自然。</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <div class="phone">
+        <div class="sb"><i>9:41</i><i>5G</i></div>
+        <div class="body">
+          <div><span class="lens">产业</span><div class="h" style="margin-top:4px">运河边为什么有工厂？</div><div class="sub">备课卡 · 出门前 5 分钟读完</div></div>
+          <div class="seg"><span>4–6 岁</span><span class="on">6–9 岁</span><span>9–12 岁</span></div>
+          <div class="card"><div class="sub">一句话讲透</div><div style="font-size:13.5px;font-weight:600">以前运货主要靠船。工厂盖在河边，棉花运得进来，布运得出去。</div></div>
+          <div class="card" style="gap:9px">
+            <div class="stop"><i>1</i><div><b>拱宸桥</b><div class="sub">大运河杭州段的地标。先数数桥下过了几条船。</div></div></div>
+            <div class="stop"><i>2</i><div><b>通益公纱厂旧址</b><div class="sub">清末办起来的纱厂，看屋顶为什么是锯齿形。</div></div></div>
+            <div class="stop"><i>3</i><div><b>桥西直街</b><div class="sub">工人和船家住过的老街。</div></div></div>
+          </div>
+          <div class="q"><b>问孩子</b><br>如果你要开一家工厂，会盖在哪里？为什么？</div>
+          <div class="btn">出发</div>
+        </div>
+      </div>
+      <figcaption><b>备课卡</b>替家长“提前查好资料”。按年龄给三种讲法，重点是那个抛给孩子的问题，不是知识点清单。</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <div class="phone">
+        <div class="sb"><i>10:26</i><i>5G</i></div>
+        <div class="body">
+          <div class="map"><svg viewBox="0 0 262 150"><use href="#citymap" y="-50" width="262" height="250"/><circle cx="150" cy="88" r="9" fill="#0F4C45"/><circle cx="150" cy="88" r="16" fill="#0F4C45" fill-opacity=".18"/></svg>
+            <div class="float" style="left:10px;top:10px;font-weight:700">第 2 站，共 3 站</div>
+            <div class="float" style="right:10px;bottom:10px">新涂亮 2 条路</div>
+          </div>
+          <div class="card">
+            <div class="row"><b style="font-size:14px">通益公纱厂旧址</b><span class="sub">6–9 岁版</span></div>
+            <div>一百多年前，这里的机器从早转到晚，把棉花纺成纱线。纱线装上船，顺着运河送到别的城市。</div>
+            <div class="row" style="gap:10px;justify-content:flex-start"><span class="play"></span><span class="wave"><i style="height:30%"></i><i style="height:70%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:80%"></i><i style="height:50%"></i><i style="height:90%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:25%"></i><i style="height:55%;opacity:.25"></i><i style="height:75%;opacity:.25"></i><i style="height:35%;opacity:.25"></i><i style="height:60%;opacity:.25"></i></span><span class="sub">0:48</span></div>
+          </div>
+          <div class="acts">
+            <div class="act cam">拍一拍<small>看到什么问什么</small></div>
+            <div class="act mic">孩子来讲<small>录下他的版本</small></div>
+          </div>
+          <div class="sub" style="text-align:center">手机可以收起来，走到下一站会自动提醒</div>
+        </div>
+      </div>
+      <figcaption><b>边走边讲</b>路上只留两个大按钮。讲解可以用听的，家长的眼睛留给孩子和马路。</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <div class="phone">
+        <div class="sb"><i>10:31</i><i>5G</i></div>
+        <div class="body">
+          <div class="map"><svg viewBox="0 0 262 170" role="img" aria-label="示意：锯齿形屋顶的老厂房">
+            <rect width="262" height="170" fill="#CFE3EC"/><rect y="128" width="262" height="42" fill="#B9C7B4"/>
+            <path d="M24 128 V78 L64 52 V78 L104 52 V78 L144 52 V78 L184 52 V78 L224 52 V128 Z" fill="#B5553C"/>
+            <g fill="#F3E6C4"><path d="M24 78 L64 52 V78Z"/><path d="M64 78 L104 52 V78Z"/><path d="M104 78 L144 52 V78Z"/><path d="M144 78 L184 52 V78Z"/><path d="M184 78 L224 52 V78Z"/></g>
+            <g fill="#7C3324"><rect x="40" y="94" width="18" height="34"/><rect x="82" y="94" width="18" height="22"/><rect x="122" y="94" width="18" height="22"/><rect x="162" y="94" width="18" height="22"/><rect x="198" y="94" width="18" height="22"/></g>
+            <rect x="92" y="38" width="96" height="52" rx="6" fill="none" stroke="#FFC531" stroke-width="3" stroke-dasharray="8 6"/>
+          </svg></div>
+          <div class="bubble"><b>这是锯齿形屋顶。</b><br>斜面上是一排朝北的天窗。北面的光不刺眼，一整天都很均匀，纺纱工人才能看清细细的线。
+            <div class="src">依据：建筑特征识别 + 本站资料 · 不确定的地方我会直接说</div></div>
+          <div class="chips"><span class="chip">为什么窗朝北？</span><span class="chip">现在这里做什么？</span></div>
+          <div class="btn ghost">存进今天的日志</div>
+        </div>
+      </div>
+      <figcaption><b>拍一拍</b>孩子指着问“这是什么”时用。回答两三句，带出处，下面给出可以继续追问的问题。</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <div class="phone">
+        <div class="sb"><i>16:02</i><i>5G</i></div>
+        <div class="body">
+          <div><div class="sub">2026 年 11 月 14 日 周六 · 第 9 次出门</div><div class="h">运河边为什么有工厂？</div></div>
+          <div class="stat"><div><span class="big">1.8</span><small>公里</small></div><div><span class="big">4</span><small>条新路</small></div><div><span class="big">3</span><small>个故事</small></div></div>
+          <div class="quote">“工厂要住在河边，因为船可以帮它送棉花。”<small>小满，6 岁，在桥西直街讲的 · 录音 0:37</small></div>
+          <div class="pics"><i></i><i></i><i></i></div>
+          <div class="card"><div class="row"><b>今天点亮的镜头</b><span class="lens">产业 +1</span></div><div class="sub">产业镜头已经用过 3 次，下次可以试试“规划”。</div></div>
+          <div class="acts"><div class="btn ghost">生成分享图</div><div class="btn">收进城市之书</div></div>
+        </div>
+        <div class="tabs"><span>地图</span><span>主题</span><span class="on">日志</span><span>我家</span></div>
+      </div>
+      <figcaption><b>日志</b>到家自动生成。最显眼的位置留给孩子自己说的那句话，这是家长最愿意保存和转发的内容。</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <div class="phone">
+        <div class="sb"><i>20:15</i><i>5G</i></div>
+        <div class="body">
+          <div><div class="h">小满家</div><div class="sub">出门 9 次 · 走过 37 条路 · 累计 16.4 公里</div></div>
+          <div class="card" style="gap:8px">
+            <b>各区涂亮比例</b>
+            <div class="bar"><span>拱墅</span><u><b style="width:12%"></b></u><span>12%</span></div>
+            <div class="bar"><span>上城</span><u><b style="width:8%"></b></u><span>8%</span></div>
+            <div class="bar"><span>西湖</span><u><b style="width:5%"></b></u><span>5%</span></div>
+            <div class="bar"><span>滨江</span><u><b style="width:1%"></b></u><span>1%</span></div>
+          </div>
+          <div class="lenses"><div><b>3</b>历史</div><div><b>2</b>人文</div><div><b>3</b>产业</div><div><b>1</b>规划</div><div><b>0</b>公共</div><div><b>0</b>自然</div></div>
+          <div class="vip"><div class="row"><b>城迹会员</b><span class="price">¥98<small style="font-size:11px;font-weight:400"> / 年</small></span></div><div style="font-size:11.5px;opacity:.85">不限次数的主题和拍一拍 · 全部年龄版本 · 年度《城市之书》排版</div></div>
+          <div class="card"><div class="row"><b>实体《我家的杭州》地图</b><span class="sub">¥39</span></div><div class="sub">可以贴在墙上、用彩笔涂的那一张。</div></div>
+        </div>
+        <div class="tabs"><span>地图</span><span>主题</span><span>日志</span><span class="on">我家</span></div>
+      </div>
+      <figcaption><b>我家</b>长期进度和付费入口。会员、实体地图、年度城市之书三样都放在这里，不打断出门流程。</figcaption>
+    </figure>
+
+  </div>
+</section>
+
+<section class="sec">
+  <div class="eyebrow">Principles</div>
+  <h2>设计上的四个取舍</h2>
+  <div class="brandgrid">
+    <div class="tile"><h3>路上少看屏幕</h3><p>出门后只有两个按钮。讲解默认语音，到站提醒靠震动。产品的目的是让家长和孩子看城市。</p></div>
+    <div class="tile"><h3>问题比知识重要</h3><p>每个主题的标题是一个问题，每张备课卡都以“问孩子”结尾。家长负责提问，AI 负责兜底。</p></div>
+    <div class="tile"><h3>孩子不需要账号</h3><p>账号属于家长，孩子只有昵称和出生年份。轨迹默认只存在本机，降低未成年人信息合规风险。</p></div>
+    <div class="tile"><h3>AI 说不准就直说</h3><p>每条讲解标注依据。地方史料查不到时写“这一点我没查到可靠记载”，不编故事。</p></div>
+  </div>
+  <p class="note">定价和实体周边价格为方案建议值，尚未验证。</p>
+</section>
+
+</div>

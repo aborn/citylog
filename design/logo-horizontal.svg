@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 512" role="img" aria-label="城迹 CityLog">
+<rect width="512" height="512" rx="116" fill="#0F4C45"/>
+<polygon points="96,156 203,126 203,356 96,386" fill="#FBFAF3"/><polygon points="203,126 309,156 309,386 203,356" fill="#FFC531"/><polygon points="309,156 416,126 416,356 309,386" fill="#FBFAF3"/><polygon points="203,126 215,129.4 215,359.4 203,356" fill="#0B3B36" fill-opacity=".16"/><polygon points="309,156 321,152.6 321,382.6 309,386" fill="#0B3B36" fill-opacity=".10"/><path d="M134 326 C 176 312, 168 246, 214 244 S 268 318, 312 276 S 340 196, 376 186" fill="none" stroke="#0F4C45" stroke-width="15" stroke-linecap="round" stroke-dasharray="1 30"/><circle cx="134" cy="326" r="15" fill="#0F4C45"/><circle cx="378" cy="184" r="27" fill="#FF6B4A"/><circle cx="378" cy="184" r="10" fill="#FBFAF3"/>
+<text x="580" y="270" font-family="'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif" font-weight="700" font-size="200" fill="#0F4C45" letter-spacing="8">城迹</text>
+<text x="588" y="372" font-family="'Avenir Next','Helvetica Neue',Arial,sans-serif" font-weight="600" font-size="72" fill="#0F4C45" letter-spacing="14">CITYLOG</text>
+<text x="588" y="446" font-family="'PingFang SC','Noto Sans SC',sans-serif" font-size="44" fill="#5B6F6A" letter-spacing="6">世面，就在家门口</text>
+</svg>
